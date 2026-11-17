@@ -55,6 +55,28 @@ describe('onboardingStep', () => {
           trainingDays: ['monday', 'thursday'],
           sessionMinutes: 30,
         },
+        inventory: { equipment: ['dumbbells'], customEquipment: [] },
+      }),
+    ).toBe('complete');
+  });
+});
+
+describe('onboardingStep with equipment', () => {
+  const trained: Athlete = {
+    ...withBodyStats,
+    experienceLevel: 'beginner',
+    availability: { trainingDays: ['monday'], sessionMinutes: 30 },
+  };
+
+  it('asks for equipment once training details are set', () => {
+    expect(onboardingStep(trained)).toBe('equipment');
+  });
+
+  it('is complete once an Inventory is saved, even an empty one', () => {
+    expect(
+      onboardingStep({
+        ...trained,
+        inventory: { equipment: [], customEquipment: [] },
       }),
     ).toBe('complete');
   });

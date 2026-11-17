@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useAthlete } from '../athlete/athleteContext';
 import { BodyStatsForm } from '../athlete/BodyStatsForm';
 import { GoalForm } from '../athlete/GoalForm';
+import { InventoryForm } from '../athlete/InventoryForm';
 import { TrainingForm } from '../athlete/TrainingForm';
 
 interface ProfilePageProps {
@@ -41,6 +42,12 @@ export function ProfilePage({ onBack }: ProfilePageProps) {
         onSubmit={(experienceLevel, availability) =>
           save({ ...athlete, experienceLevel, availability })
         }
+      />
+      <InventoryForm
+        stored={athlete.inventory}
+        submitLabel={t('common.save')}
+        confirmSaved
+        onSubmit={(inventory) => save({ ...athlete, inventory })}
       />
     </section>
   );

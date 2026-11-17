@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { onboardingStep } from '../../domain/athlete/athlete';
+import { EMPTY_INVENTORY } from '../../domain/inventory/inventory';
 import { useAthlete } from '../athlete/athleteContext';
 import { CatalogueScreen } from '../catalogue/CatalogueScreen';
 import { HomePage } from './HomePage';
@@ -16,7 +17,14 @@ export function Screens() {
   const goHome = () => {
     setScreen('home');
   };
-  if (screen === 'catalogue') return <CatalogueScreen onBack={goHome} />;
+  if (screen === 'catalogue') {
+    return (
+      <CatalogueScreen
+        onBack={goHome}
+        inventory={athlete.inventory ?? EMPTY_INVENTORY}
+      />
+    );
+  }
   if (screen === 'profile') {
     return <ProfilePage onBack={goHome} />;
   }

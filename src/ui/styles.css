@@ -410,3 +410,35 @@ h2 {
   margin: 0;
   padding-inline-start: 1.25rem;
 }
+
+/* Inventory */
+
+.custom-equipment {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.custom-equipment h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.custom-equipment__list {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-equipment__row,
+.custom-equipment__add {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+
+.catalogue__allowed {
+  justify-self: start;
+}

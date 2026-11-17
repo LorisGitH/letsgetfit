@@ -23,6 +23,10 @@ const onboarded: Athlete = {
   },
   experienceLevel: 'beginner',
   availability: { trainingDays: ['monday', 'thursday'], sessionMinutes: 45 },
+  inventory: {
+    equipment: ['dumbbells'],
+    customEquipment: [{ id: 'trx', name: 'TRX strap' }],
+  },
 };
 
 function renderApp(repository: AthleteRepository, language: Language = 'en') {
@@ -87,14 +91,14 @@ describe('First-run onboarding', () => {
       name: 'Continue',
     });
     expect(continueButton).toBeDisabled();
-    expect(screen.getByText('Step 1 of 4')).toBeInTheDocument();
+    expect(screen.getByText('Step 1 of 5')).toBeInTheDocument();
 
     await acceptDisclaimer(user);
 
     expect(
       await screen.findByRole('heading', { name: 'Your goal' }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Step 2 of 4')).toBeInTheDocument();
+    expect(screen.getByText('Step 2 of 5')).toBeInTheDocument();
     expect(repository.saved?.disclaimerAcceptedAt).toEqual(expect.any(String));
   });
 
@@ -205,6 +209,16 @@ describe('First-run onboarding', () => {
     await user.click(screen.getByRole('button', { name: 'Continue' }));
 
     expect(
+      await screen.findByRole('heading', { name: 'Your equipment' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('Step 5 of 5')).toBeInTheDocument();
+    await user.click(screen.getByLabelText('Pull-up bar'));
+    await user.click(screen.getByLabelText('Dumbbells'));
+    await user.type(screen.getByLabelText('Add your own'), 'TRX strap');
+    await user.click(screen.getByRole('button', { name: 'Add' }));
+    await user.click(screen.getByRole('button', { name: 'Continue' }));
+
+    expect(
       await screen.findByRole('heading', { name: "You're all set" }),
     ).toBeInTheDocument();
     expect(repository.saved).toMatchObject({
@@ -220,7 +234,48 @@ describe('First-run onboarding', () => {
       },
       experienceLevel: 'intermediate',
       availability: { trainingDays: ['monday', 'friday'], sessionMinutes: 45 },
+      inventory: {
+        equipment: ['dumbbells', 'pullUpBar'],
+        customEquipment: [{ name: 'TRX strap' }],
+      },
     });
+  });
+
+  it('allows finishing with no equipment at all', async () => {
+    const user = userEvent.setup();
+    const { inventory: _inventory, ...withoutInventory } = onboarded;
+    const repository = createInMemoryAthleteRepository(withoutInventory);
+    renderApp(repository);
+
+    await user.click(await screen.findByRole('button', { name: 'Continue' }));
+
+    expect(
+      await screen.findByRole('heading', { name: "You're all set" }),
+    ).toBeInTheDocument();
+    expect(repository.saved?.inventory).toEqual({
+      equipment: [],
+      customEquipment: [],
+    });
+  });
+
+  it('checks Custom Equipment names', async () => {
+    const user = userEvent.setup();
+    const { inventory: _inventory, ...withoutInventory } = onboarded;
+    renderApp(createInMemoryAthleteRepository(withoutInventory));
+
+    await user.click(await screen.findByRole('button', { name: 'Add' }));
+    expect(screen.getByLabelText('Add your own')).toHaveAccessibleDescription(
+      'Enter a name.',
+    );
+
+    await user.type(screen.getByLabelText('Add your own'), 'Weighted vest');
+    await user.click(screen.getByRole('button', { name: 'Add' }));
+    await user.type(screen.getByLabelText('Add your own'), ' weighted VEST');
+    await user.click(screen.getByRole('button', { name: 'Add' }));
+
+    expect(screen.getByLabelText('Add your own')).toHaveAccessibleDescription(
+      'You already have equipment with this name.',
+    );
   });
 
   it('requires at least one Training Day and a session length', async () => {
@@ -255,6 +310,45 @@ describe('Home', () => {
 });
 
 describe('Profile', () => {
+  it('shows the Equipment on the home screen', async () => {
+    renderApp(createInMemoryAthleteRepository(onboarded));
+
+    const equipment = await screen.findByText('Equipment', { selector: 'dt' });
+    expect(equipment.nextElementSibling).toHaveTextContent(
+      'Dumbbells, TRX strap',
+    );
+  });
+
+  it('edits the Inventory: owned Equipment, renaming and removing Custom Equipment', async () => {
+    const user = userEvent.setup();
+    const repository = createInMemoryAthleteRepository(onboarded);
+    renderApp(repository);
+    await user.click(
+      await screen.findByRole('button', { name: 'Edit profile' }),
+    );
+
+    const form = screen.getByRole('form', { name: 'Your equipment' });
+    await user.click(within(form).getByLabelText('Bench'));
+    const name = within(form).getByLabelText('Name of TRX strap');
+    await user.clear(name);
+    await user.type(name, 'Suspension trainer');
+    await user.type(
+      within(form).getByLabelText('Add your own'),
+      'Weighted vest',
+    );
+    await user.click(within(form).getByRole('button', { name: 'Add' }));
+    await user.click(
+      within(form).getByRole('button', { name: 'Remove Weighted vest' }),
+    );
+    await user.click(within(form).getByRole('button', { name: 'Save' }));
+
+    expect(await within(form).findByRole('status')).toHaveTextContent('Saved.');
+    expect(repository.saved?.inventory).toEqual({
+      equipment: ['dumbbells', 'bench'],
+      customEquipment: [{ id: 'trx', name: 'Suspension trainer' }],
+    });
+  });
+
   it('shows the Goal on the home screen', async () => {
     renderApp(createInMemoryAthleteRepository(onboarded));
 

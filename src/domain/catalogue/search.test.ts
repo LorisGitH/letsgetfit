@@ -92,4 +92,14 @@ describe('filterExercises', () => {
       filterExercises(all, { equipment: 'none' }, 'en').map((e) => e.id),
     ).toEqual(['pushups']);
   });
+
+  it('shows only Exercises the Inventory allows, bodyweight included', () => {
+    const inventory = {
+      equipment: ['dumbbells' as const],
+      customEquipment: [],
+    };
+    expect(
+      filterExercises(all, { allowedBy: inventory }, 'en').map((e) => e.id),
+    ).toEqual(['curl', 'pushups']);
+  });
 });
