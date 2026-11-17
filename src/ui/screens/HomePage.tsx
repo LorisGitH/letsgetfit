@@ -3,9 +3,10 @@ import { useAthlete } from '../athlete/athleteContext';
 
 interface HomePageProps {
   onEditProfile: () => void;
+  onBrowseCatalogue: () => void;
 }
 
-export function HomePage({ onEditProfile }: HomePageProps) {
+export function HomePage({ onEditProfile, onBrowseCatalogue }: HomePageProps) {
   const { t } = useTranslation();
   const { athlete } = useAthlete();
   const {
@@ -54,9 +55,18 @@ export function HomePage({ onEditProfile }: HomePageProps) {
           </>
         )}
       </dl>
-      <button type="button" className="button" onClick={onEditProfile}>
-        {t('home.editProfile')}
-      </button>
+      <div className="page__actions">
+        <button type="button" className="button" onClick={onBrowseCatalogue}>
+          {t('home.browseCatalogue')}
+        </button>
+        <button
+          type="button"
+          className="button button--quiet"
+          onClick={onEditProfile}
+        >
+          {t('home.editProfile')}
+        </button>
+      </div>
     </section>
   );
 }
