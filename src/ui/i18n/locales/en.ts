@@ -83,6 +83,8 @@ export const en = {
     loadFailed: "Couldn't load the exercises. Reload the page to try again.",
     primaryMuscles: 'Main muscles',
     secondaryMuscles: 'Also works',
+    strainedJoints: 'Strains',
+    noJointStrain: 'No joint under particular strain',
     requiredEquipment: 'Equipment',
     noEquipmentNeeded: 'No equipment needed',
     optionalEquipment: 'Can use',

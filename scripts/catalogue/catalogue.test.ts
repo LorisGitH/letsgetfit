@@ -32,6 +32,18 @@ describe('the imported Catalogue', () => {
     }
   });
 
+  it('tags joint strain for nearly every Exercise', () => {
+    const untagged = catalogue.exercises.filter(
+      (exercise) => exercise.strainedJoints.length === 0,
+    );
+    expect(untagged.map((exercise) => exercise.id).sort()).toEqual([
+      'dead-bug',
+      'dumbbell-incline-row',
+      'isometric-chest-squeezes',
+      'walking-treadmill',
+    ]);
+  });
+
   it('never lists the same Equipment as both required and optional', () => {
     for (const {
       id,
@@ -54,6 +66,20 @@ describe('the imported Catalogue', () => {
 });
 
 describe('parseCatalogue', () => {
+  it('requires joint tags on every Exercise, from the Joint list', () => {
+    const exercise = catalogue.exercises[0];
+    const { strainedJoints: _strainedJoints, ...untagged } = exercise ?? {};
+    expect(() =>
+      parseCatalogue({ ...catalogue, exercises: [untagged] }),
+    ).toThrow(/exercises\[0\]\.strainedJoints/);
+    expect(() =>
+      parseCatalogue({
+        ...catalogue,
+        exercises: [{ ...exercise, strainedJoints: ['spine'] }],
+      }),
+    ).toThrow(/strainedJoints\[0\]/);
+  });
+
   it('rejects unknown Muscles and Equipment', () => {
     const exercise = catalogue.exercises[0];
     expect(() =>
