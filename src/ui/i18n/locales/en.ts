@@ -91,8 +91,6 @@ export const en = {
     level: 'Level',
     instructions: 'Instructions',
     imageAlt: '{{name}}, step {{step}}',
-    notTranslated:
-      "This exercise's name and instructions are only in English for now.",
     credit: 'Exercises, instructions and photos from',
     creditLicence: '(public domain).',
     cardio: 'Cardio',

@@ -110,19 +110,26 @@ describe('Catalogue browser', () => {
     );
   });
 
-  it('speaks French, and says when instructions are not translated yet', async () => {
+  it('shows names, instructions, muscles and Equipment in French', async () => {
     const user = userEvent.setup();
     renderCatalogue('fr');
 
-    await user.selectOptions(await screen.findByLabelText('Muscle'), 'chest');
-    expect(
-      screen.getByRole('option', { name: 'Pectoraux' }),
-    ).toBeInTheDocument();
-
-    await user.click(
-      within(results('Exercices')).getByRole('button', { name: /^Pushups$/ }),
+    await user.type(
+      await screen.findByRole('searchbox', { name: 'Rechercher' }),
+      'pompes',
     );
-    expect(screen.getByText(/en anglais pour le moment/)).toBeInTheDocument();
+    await user.click(
+      within(results('Exercices')).getByRole('button', { name: /^Pompes$/ }),
+    );
+
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Pompes' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('list', { name: 'Instructions' }),
+    ).toHaveTextContent(/Allongez-vous face au sol/);
+    expect(screen.getByText('Pectoraux')).toBeInTheDocument();
+    expect(screen.getByText('Poignées de pompes')).toBeInTheDocument();
   });
 
   it('goes back home', async () => {

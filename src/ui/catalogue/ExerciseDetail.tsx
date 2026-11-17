@@ -13,7 +13,6 @@ export function ExerciseDetail({ exercise, onBack }: ExerciseDetailProps) {
   const instructionsId = useId();
   const language = contentLanguage(i18n.language);
   const name = localized(exercise.name, language);
-  const untranslated = exercise.instructions[language] === undefined;
 
   return (
     <article className="exercise">
@@ -21,9 +20,6 @@ export function ExerciseDetail({ exercise, onBack }: ExerciseDetailProps) {
         {t('catalogue.backToList')}
       </button>
       <h2>{name}</h2>
-      {untranslated && (
-        <p className="exercise__note">{t('catalogue.notTranslated')}</p>
-      )}
 
       {exercise.images.length > 0 && (
         <div className="exercise__images">
