@@ -1,3 +1,4 @@
+import { inListOrder } from '../listOrder';
 import {
   checkPresent,
   fieldErrors,
@@ -47,7 +48,7 @@ export function validateAvailability(
   return {
     ok: true,
     value: {
-      trainingDays: WEEKDAYS.filter((day) => trainingDays.includes(day)),
+      trainingDays: inListOrder(WEEKDAYS, trainingDays),
       sessionMinutes,
     },
   };
