@@ -262,14 +262,33 @@ export const fr: Translation = {
     equipmentInUse:
       'Utilisé par : {{names}}. Modifiez ou supprimez ces exercices d’abord.',
   },
+  plan: {
+    title: 'Votre plan',
+    intro:
+      "Construit à partir de votre objectif, de vos exercices, de votre matériel et de vos jours d'entraînement. Il se répète chaque semaine.",
+    generate: 'Générer mon plan',
+    regenerate: 'Générer à nouveau',
+    session: '{{weekday}} : {{focus}}',
+    summary: '{{focus}} · environ {{minutes}} min',
+    target: '{{sets}} × {{repsMin}}–{{repsMax}} rép. · repos {{rest}} s',
+    emptySession:
+      "Aucun exercice de votre liste n'est encore utilisable pour cette séance.",
+    removedExercise: "Exercice qui n'est plus disponible",
+    focus: {
+      fullBody: 'Corps entier',
+      upper: 'Haut du corps',
+      lower: 'Bas du corps',
+      push: 'Poussée',
+      pull: 'Tirage',
+      legs: 'Jambes',
+    },
+  },
   home: {
     title: 'Tout est prêt',
     goal: 'Objectif',
     focusAreas: 'Zones ciblées',
     limitations: 'Limitations',
     none: 'Aucune',
-    planComing:
-      'Votre Plan sera construit à partir de ces informations dans une prochaine version.',
     trainingDays: "Jours d'entraînement",
     sessionMinutes: 'Durée des séances',
     experienceLevel: "Niveau d'expérience",
