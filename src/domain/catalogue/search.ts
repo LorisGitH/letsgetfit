@@ -1,4 +1,5 @@
 import type { Muscle } from '../body/muscle';
+import { allows, type Inventory } from '../inventory/inventory';
 import type { Equipment } from './equipment';
 import { localized, type ContentLanguage, type Exercise } from './exercise';
 
@@ -8,6 +9,8 @@ export interface CatalogueFilter {
   muscle?: Muscle | undefined;
   /** Equipment the Exercise requires or can use, or `none` for Exercises needing nothing. */
   equipment?: Equipment | 'none' | undefined;
+  /** Keeps only Exercises this Inventory allows. */
+  allowedBy?: Inventory | undefined;
 }
 
 /** Lower case, no accents, words separated by single spaces. */
@@ -51,7 +54,8 @@ export function filterExercises(
         words.every((word) => searchable.includes(word)) &&
         (filter.muscle === undefined ||
           exercise.primaryMuscles.includes(filter.muscle)) &&
-        usesEquipment(exercise, filter.equipment)
+        usesEquipment(exercise, filter.equipment) &&
+        (filter.allowedBy === undefined || allows(filter.allowedBy, exercise))
       );
     })
     .sort((a, b) => collator.compare(a.name, b.name))

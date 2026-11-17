@@ -3,14 +3,17 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { I18nextProvider } from 'react-i18next';
 import { describe, expect, it, vi } from 'vitest';
+import type { Inventory } from '../../domain/inventory/inventory';
 import { createI18n, type Language } from '../i18n/i18n';
 import { CatalogueScreen } from './CatalogueScreen';
 
-function renderCatalogue(language: Language = 'en') {
+const noEquipment: Inventory = { equipment: [], customEquipment: [] };
+
+function renderCatalogue(language: Language = 'en', inventory = noEquipment) {
   const onBack = vi.fn();
   render(
     <I18nextProvider i18n={createI18n(language)}>
-      <CatalogueScreen onBack={onBack} />
+      <CatalogueScreen onBack={onBack} inventory={inventory} />
     </I18nextProvider>,
   );
   return { onBack };
@@ -130,6 +133,25 @@ describe('Catalogue browser', () => {
     ).toHaveTextContent(/Allongez-vous face au sol/);
     expect(screen.getByText('Pectoraux')).toBeInTheDocument();
     expect(screen.getByText('Poignées de pompes')).toBeInTheDocument();
+  });
+
+  it('can show only what the Inventory allows', async () => {
+    const user = userEvent.setup();
+    renderCatalogue('en', { equipment: ['dumbbells'], customEquipment: [] });
+
+    await user.click(
+      await screen.findByLabelText('Only what my equipment allows'),
+    );
+
+    expect(
+      within(results()).getByRole('button', { name: /^Hammer Curls/ }),
+    ).toBeInTheDocument();
+    expect(
+      within(results()).getByRole('button', { name: /^Pushups$/ }),
+    ).toBeInTheDocument();
+    expect(
+      within(results()).queryByRole('button', { name: /^Pullups$/ }),
+    ).toBeNull();
   });
 
   it('goes back home', async () => {

@@ -4,6 +4,7 @@ import { MUSCLES, type Muscle } from '../../domain/body/muscle';
 import { EQUIPMENT, type Equipment } from '../../domain/catalogue/equipment';
 import { localized } from '../../domain/catalogue/exercise';
 import { filterExercises } from '../../domain/catalogue/search';
+import type { Inventory } from '../../domain/inventory/inventory';
 import { CatalogueCredit } from './CatalogueCredit';
 import { contentLanguage, imageUrl } from './contentLanguage';
 import { ExerciseDetail } from './ExerciseDetail';
@@ -11,6 +12,8 @@ import { useCatalogue } from './useCatalogue';
 
 interface CatalogueScreenProps {
   onBack: () => void;
+  /** The Athlete's Inventory, for the "only what my equipment allows" filter. */
+  inventory: Inventory;
 }
 
 const isMuscle = (value: string): value is Muscle =>
@@ -18,7 +21,7 @@ const isMuscle = (value: string): value is Muscle =>
 const isEquipmentFilter = (value: string): value is Equipment | 'none' =>
   value === 'none' || EQUIPMENT.some((item) => item === value);
 
-export function CatalogueScreen({ onBack }: CatalogueScreenProps) {
+export function CatalogueScreen({ onBack, inventory }: CatalogueScreenProps) {
   const { t, i18n } = useTranslation();
   const state = useCatalogue();
   const ids = {
@@ -30,6 +33,7 @@ export function CatalogueScreen({ onBack }: CatalogueScreenProps) {
   const [query, setQuery] = useState('');
   const [muscle, setMuscle] = useState<Muscle | undefined>();
   const [equipment, setEquipment] = useState<Equipment | 'none' | undefined>();
+  const [onlyAllowed, setOnlyAllowed] = useState(false);
   const [openId, setOpenId] = useState<string | undefined>();
   const language = contentLanguage(i18n.language);
 
@@ -38,11 +42,16 @@ export function CatalogueScreen({ onBack }: CatalogueScreenProps) {
       state.status === 'ready'
         ? filterExercises(
             state.catalogue.exercises,
-            { query, muscle, equipment },
+            {
+              query,
+              muscle,
+              equipment,
+              allowedBy: onlyAllowed ? inventory : undefined,
+            },
             language,
           )
         : [],
-    [state, query, muscle, equipment, language],
+    [state, query, muscle, equipment, onlyAllowed, inventory, language],
   );
 
   if (state.status === 'loading')
@@ -136,6 +145,16 @@ export function CatalogueScreen({ onBack }: CatalogueScreenProps) {
           </select>
         </div>
       </div>
+      <label className="choice catalogue__allowed">
+        <input
+          type="checkbox"
+          checked={onlyAllowed}
+          onChange={(event) => {
+            setOnlyAllowed(event.target.checked);
+          }}
+        />
+        <span className="choice__label">{t('catalogue.onlyAllowed')}</span>
+      </label>
 
       <p role="status" className="catalogue__count">
         {t('catalogue.count', { count: exercises.length })}
