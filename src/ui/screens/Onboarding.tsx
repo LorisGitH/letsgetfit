@@ -2,10 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { onboardingStep } from '../../domain/athlete/athlete';
 import { useAthlete } from '../athlete/athleteContext';
 import { BodyStatsForm } from '../athlete/BodyStatsForm';
+import { GoalForm } from '../athlete/GoalForm';
 import { TrainingForm } from '../athlete/TrainingForm';
 import { DisclaimerStep } from './DisclaimerStep';
 
-const STEPS = ['disclaimer', 'bodyStats', 'training'] as const;
+const STEPS = ['disclaimer', 'goal', 'bodyStats', 'training'] as const;
 
 /** First-run flow: each step is saved as soon as it is done, so closing the app loses nothing. */
 export function Onboarding() {
@@ -27,6 +28,13 @@ export function Onboarding() {
           onAccept={() =>
             save({ ...athlete, disclaimerAcceptedAt: new Date().toISOString() })
           }
+        />
+      )}
+      {step === 'goal' && (
+        <GoalForm
+          stored={athlete}
+          submitLabel={t('common.continue')}
+          onSubmit={(choice) => save({ ...athlete, ...choice })}
         />
       )}
       {step === 'bodyStats' && (

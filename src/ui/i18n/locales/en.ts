@@ -32,6 +32,42 @@ export const en = {
     stop: 'Stop any exercise that causes pain, dizziness or shortness of breath.',
     accept: 'I understand and accept',
   },
+  goal: {
+    title: 'Your goal',
+    goal: 'Goal',
+    gainMuscle: 'Gain muscle',
+    gainMuscleHint: 'Build strength and muscle size',
+    loseFat: 'Lose fat',
+    loseFatHint: 'Reduce body fat while keeping your muscle',
+    recomposition: 'Recomposition',
+    recompositionHint: 'Lose fat and gain muscle at the same time',
+    focusAreas: 'Focus Areas (optional)',
+    focusAreasNote:
+      'A Focus Area gets extra training for its muscles. Fat is lost across the whole body, not from one chosen spot, so training an area changes its shape rather than where fat goes first.',
+    limitations: 'Limitations (optional)',
+    limitationsHint:
+      'Joints to spare. Exercises that strain them are left out of your Plan; you can still add one back yourself.',
+  },
+  focusAreas: {
+    bellyAndWaist: 'Belly & waist',
+    arms: 'Arms',
+    chest: 'Chest',
+    back: 'Back',
+    shoulders: 'Shoulders',
+    glutes: 'Glutes',
+    thighs: 'Thighs',
+    calves: 'Calves',
+  },
+  joints: {
+    neck: 'Neck',
+    shoulder: 'Shoulder',
+    elbow: 'Elbow',
+    wrist: 'Wrist',
+    lowerBack: 'Lower back',
+    hip: 'Hip',
+    knee: 'Knee',
+    ankle: 'Ankle',
+  },
   units: {
     label: 'Units',
     metric: 'Metric (kg, cm)',
@@ -92,6 +128,10 @@ export const en = {
   },
   home: {
     title: "You're all set",
+    goal: 'Goal',
+    focusAreas: 'Focus Areas',
+    limitations: 'Limitations',
+    none: 'None',
     planComing:
       'Your Plan will be built from these details in a coming version.',
     trainingDays: 'Training days',

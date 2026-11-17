@@ -34,6 +34,42 @@ export const fr: Translation = {
     stop: 'Arrêtez tout exercice qui provoque une douleur, des vertiges ou un essoufflement.',
     accept: "J'ai compris et j'accepte",
   },
+  goal: {
+    title: 'Votre objectif',
+    goal: 'Objectif',
+    gainMuscle: 'Prendre du muscle',
+    gainMuscleHint: 'Gagner en force et en volume musculaire',
+    loseFat: 'Perdre du gras',
+    loseFatHint: 'Réduire la masse grasse en gardant vos muscles',
+    recomposition: 'Recomposition',
+    recompositionHint: 'Perdre du gras et prendre du muscle en même temps',
+    focusAreas: 'Zones ciblées (facultatif)',
+    focusAreasNote:
+      "Une zone ciblée reçoit un travail supplémentaire pour ses muscles. Le gras se perd dans tout le corps, pas à un endroit choisi : entraîner une zone change sa forme, pas l'endroit où le gras part en premier.",
+    limitations: 'Limitations (facultatif)',
+    limitationsHint:
+      'Articulations à ménager. Les exercices qui les sollicitent sont retirés de votre Plan ; vous pouvez toujours en rajouter un vous-même.',
+  },
+  focusAreas: {
+    bellyAndWaist: 'Ventre et taille',
+    arms: 'Bras',
+    chest: 'Pectoraux',
+    back: 'Dos',
+    shoulders: 'Épaules',
+    glutes: 'Fessiers',
+    thighs: 'Cuisses',
+    calves: 'Mollets',
+  },
+  joints: {
+    neck: 'Cou',
+    shoulder: 'Épaule',
+    elbow: 'Coude',
+    wrist: 'Poignet',
+    lowerBack: 'Bas du dos',
+    hip: 'Hanche',
+    knee: 'Genou',
+    ankle: 'Cheville',
+  },
   units: {
     label: 'Unités',
     metric: 'Métriques (kg, cm)',
@@ -97,6 +133,10 @@ export const fr: Translation = {
   },
   home: {
     title: 'Tout est prêt',
+    goal: 'Objectif',
+    focusAreas: 'Zones ciblées',
+    limitations: 'Limitations',
+    none: 'Aucune',
     planComing:
       'Votre Plan sera construit à partir de ces informations dans une prochaine version.',
     trainingDays: "Jours d'entraînement",

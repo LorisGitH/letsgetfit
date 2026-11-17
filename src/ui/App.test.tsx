@@ -12,6 +12,9 @@ import { createI18n, type Language } from './i18n/i18n';
 const onboarded: Athlete = {
   unitSystem: 'metric',
   disclaimerAcceptedAt: '2026-11-17T10:00:00.000Z',
+  goal: 'loseFat',
+  focusAreas: ['bellyAndWaist'],
+  limitations: ['knee'],
   bodyStats: {
     dateOfBirth: '1990-06-15',
     sex: 'female',
@@ -32,6 +35,13 @@ function renderApp(repository: AthleteRepository, language: Language = 'en') {
 
 async function acceptDisclaimer(user: UserEvent) {
   await user.click(await screen.findByLabelText('I understand and accept'));
+  await user.click(screen.getByRole('button', { name: 'Continue' }));
+}
+
+async function chooseGoal(user: UserEvent) {
+  await user.click(await screen.findByLabelText(/^Lose fat/));
+  await user.click(screen.getByLabelText('Belly & waist'));
+  await user.click(screen.getByLabelText('Knee'));
   await user.click(screen.getByRole('button', { name: 'Continue' }));
 }
 
@@ -77,13 +87,14 @@ describe('First-run onboarding', () => {
       name: 'Continue',
     });
     expect(continueButton).toBeDisabled();
-    expect(screen.getByText('Step 1 of 3')).toBeInTheDocument();
+    expect(screen.getByText('Step 1 of 4')).toBeInTheDocument();
 
     await acceptDisclaimer(user);
 
     expect(
-      await screen.findByRole('heading', { name: 'About you' }),
+      await screen.findByRole('heading', { name: 'Your goal' }),
     ).toBeInTheDocument();
+    expect(screen.getByText('Step 2 of 4')).toBeInTheDocument();
     expect(repository.saved?.disclaimerAcceptedAt).toEqual(expect.any(String));
   });
 
@@ -92,20 +103,55 @@ describe('First-run onboarding', () => {
     const repository = createInMemoryAthleteRepository();
     const { unmount } = renderApp(repository);
     await acceptDisclaimer(user);
-    await screen.findByRole('heading', { name: 'About you' });
+    await screen.findByRole('heading', { name: 'Your goal' });
     unmount();
 
     renderApp(repository);
 
     expect(
+      await screen.findByRole('heading', { name: 'Your goal' }),
+    ).toBeInTheDocument();
+  });
+
+  it('requires a Goal, while Focus Areas and Limitations are optional', async () => {
+    const user = userEvent.setup();
+    const repository = createInMemoryAthleteRepository();
+    renderApp(repository);
+    await acceptDisclaimer(user);
+
+    await user.click(await screen.findByRole('button', { name: 'Continue' }));
+    expect(
+      screen.getByRole('group', { name: 'Goal' }),
+    ).toHaveAccessibleDescription('Choose an option.');
+
+    await user.click(screen.getByLabelText(/^Gain muscle/));
+    await user.click(screen.getByRole('button', { name: 'Continue' }));
+
+    expect(
       await screen.findByRole('heading', { name: 'About you' }),
     ).toBeInTheDocument();
+    expect(repository.saved).toMatchObject({
+      goal: 'gainMuscle',
+      focusAreas: [],
+      limitations: [],
+    });
+  });
+
+  it('is honest that Focus Areas do not burn fat from one spot', async () => {
+    const user = userEvent.setup();
+    renderApp(createInMemoryAthleteRepository());
+    await acceptDisclaimer(user);
+
+    expect(
+      await screen.findByRole('group', { name: 'Focus Areas (optional)' }),
+    ).toHaveAccessibleDescription(/not from one chosen spot/);
   });
 
   it('shows clear validation messages for Body Stats', async () => {
     const user = userEvent.setup();
     renderApp(createInMemoryAthleteRepository());
     await acceptDisclaimer(user);
+    await chooseGoal(user);
 
     await user.type(await screen.findByLabelText('Height (cm)'), '-170');
     await user.type(screen.getByLabelText('Weight (kg)'), 'heavy');
@@ -131,6 +177,7 @@ describe('First-run onboarding', () => {
       createInMemoryAthleteRepository({
         unitSystem: 'metric',
         disclaimerAcceptedAt: 'x',
+        goal: 'gainMuscle',
       }),
       'fr',
     );
@@ -148,6 +195,7 @@ describe('First-run onboarding', () => {
     const repository = createInMemoryAthleteRepository();
     renderApp(repository);
     await acceptDisclaimer(user);
+    await chooseGoal(user);
     await fillBodyStats(user);
 
     await user.click(await screen.findByLabelText(/^Intermediate/));
@@ -161,6 +209,9 @@ describe('First-run onboarding', () => {
     ).toBeInTheDocument();
     expect(repository.saved).toMatchObject({
       unitSystem: 'metric',
+      goal: 'loseFat',
+      focusAreas: ['bellyAndWaist'],
+      limitations: ['knee'],
       bodyStats: {
         dateOfBirth: '1990-06-15',
         sex: 'female',
@@ -189,6 +240,39 @@ describe('First-run onboarding', () => {
 });
 
 describe('Profile', () => {
+  it('shows the Goal on the home screen', async () => {
+    renderApp(createInMemoryAthleteRepository(onboarded));
+
+    const goal = await screen.findByText('Goal', { selector: 'dt' });
+    expect(goal.nextElementSibling).toHaveTextContent('Lose fat');
+  });
+
+  it('replaces the Goal and updates Focus Areas and Limitations', async () => {
+    const user = userEvent.setup();
+    const repository = createInMemoryAthleteRepository(onboarded);
+    renderApp(repository);
+    await user.click(
+      await screen.findByRole('button', { name: 'Edit profile' }),
+    );
+
+    const goalForm = screen.getByRole('form', { name: 'Your goal' });
+    await user.click(within(goalForm).getByLabelText(/^Gain muscle/));
+    await user.click(within(goalForm).getByLabelText('Belly & waist'));
+    await user.click(within(goalForm).getByLabelText('Arms'));
+    await user.click(within(goalForm).getByLabelText('Knee'));
+    await user.click(within(goalForm).getByLabelText('Wrist'));
+    await user.click(within(goalForm).getByRole('button', { name: 'Save' }));
+
+    expect(await within(goalForm).findByRole('status')).toHaveTextContent(
+      'Saved.',
+    );
+    expect(repository.saved).toMatchObject({
+      goal: 'gainMuscle',
+      focusAreas: ['arms'],
+      limitations: ['wrist'],
+    });
+  });
+
   it('lets the Athlete edit their details later', async () => {
     const user = userEvent.setup();
     const repository = createInMemoryAthleteRepository(onboarded);
