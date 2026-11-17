@@ -120,6 +120,11 @@ export const JOINT_OVERRIDES: Record<
   'One-Arm_Dumbbell_Row': { add: ['lowerBack'] },
   // The head stays on the floor.
   Reverse_Crunch: { remove: ['neck'] },
+  // Despite the name, hanging knee raises on a pull-up bar, not running.
+  Wind_Sprints: {
+    add: ['shoulder', 'elbow', 'lowerBack'],
+    remove: ['hip', 'knee', 'ankle'],
+  },
 };
 
 export function strainedJoints(source: SourceExercise): Joint[] {

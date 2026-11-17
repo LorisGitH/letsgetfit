@@ -62,9 +62,10 @@ function localizedOf<Content>(
   read: (content: unknown, contentPath: string) => Content,
 ): Localized<Content> {
   const languages = record(value, path);
-  const content: Localized<Content> = { en: read(languages.en, `${path}.en`) };
-  if (languages.fr !== undefined) content.fr = read(languages.fr, `${path}.fr`);
-  return content;
+  return {
+    en: read(languages.en, `${path}.en`),
+    fr: read(languages.fr, `${path}.fr`),
+  };
 }
 
 function parseExercise(value: unknown, path: string): Exercise {

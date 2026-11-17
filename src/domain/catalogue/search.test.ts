@@ -5,8 +5,8 @@ import { filterExercises, normalizeForSearch } from './search';
 const exercise = (id: string, overrides: Partial<Exercise>): Exercise => ({
   id,
   kind: 'strength',
-  name: { en: id },
-  instructions: { en: ['Do it.'] },
+  name: { en: id, fr: id },
+  instructions: { en: ['Do it.'], fr: ['Faites-le.'] },
   level: 'beginner',
   primaryMuscles: ['chest'],
   secondaryMuscles: [],
@@ -28,7 +28,7 @@ const curl = exercise('curl', {
   requiredEquipment: ['dumbbells'],
 });
 const row = exercise('row', {
-  name: { en: 'Rowing, Stationary' },
+  name: { en: 'Rowing, Stationary', fr: 'Rameur' },
   kind: 'cardio',
   primaryMuscles: ['quadriceps'],
   requiredEquipment: ['rowingMachine'],
@@ -64,10 +64,11 @@ describe('filterExercises', () => {
     ).toEqual(['curl']);
   });
 
-  it('falls back to the English name when there is no translation', () => {
+  it('searches names in the chosen language only', () => {
     expect(
-      filterExercises(all, { query: 'rowing' }, 'fr').map((e) => e.id),
+      filterExercises(all, { query: 'rameur' }, 'fr').map((e) => e.id),
     ).toEqual(['row']);
+    expect(filterExercises(all, { query: 'rowing' }, 'fr')).toEqual([]);
   });
 
   it('filters by primary Muscle', () => {

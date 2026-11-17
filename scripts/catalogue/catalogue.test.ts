@@ -44,6 +44,18 @@ describe('the imported Catalogue', () => {
     ]);
   });
 
+  it('has reviewed French for every Exercise, step for step', () => {
+    for (const { id, name, instructions } of catalogue.exercises) {
+      expect(name.fr.trim(), id).not.toBe('');
+      expect(instructions.fr.length, id).toBe(instructions.en.length);
+      instructions.fr.forEach((step, index) => {
+        expect(step, `${id} step ${String(index + 1)}`).not.toBe(
+          instructions.en[index],
+        );
+      });
+    }
+  });
+
   it('never lists the same Equipment as both required and optional', () => {
     for (const {
       id,
@@ -78,6 +90,16 @@ describe('parseCatalogue', () => {
         exercises: [{ ...exercise, strainedJoints: ['spine'] }],
       }),
     ).toThrow(/strainedJoints\[0\]/);
+  });
+
+  it('requires French names and instructions', () => {
+    const exercise = catalogue.exercises[0];
+    expect(() =>
+      parseCatalogue({
+        ...catalogue,
+        exercises: [{ ...exercise, name: { en: exercise?.name.en } }],
+      }),
+    ).toThrow(/exercises\[0\]\.name\.fr/);
   });
 
   it('rejects unknown Muscles and Equipment', () => {
