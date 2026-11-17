@@ -442,3 +442,83 @@ h2 {
 .catalogue__allowed {
   justify-self: start;
 }
+
+/* Repertoire */
+
+.catalogue__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--space-2);
+}
+
+.catalogue__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.exercise-card-item {
+  position: relative;
+}
+
+.exercise-card__mine {
+  position: absolute;
+  top: var(--space-1);
+  right: var(--space-1);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.exercise-card__mine input {
+  width: 1.4rem;
+  height: 1.4rem;
+  accent-color: var(--color-accent);
+}
+
+.my-exercises__section {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.my-exercises__section h3 {
+  margin: 0;
+}
+
+.my-exercises__list {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.my-exercises__row,
+.my-exercises__confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.my-exercises__row > span:first-child {
+  flex: 1 1 10rem;
+  font-weight: 600;
+}
+
+.field__input--multiline {
+  max-width: 100%;
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.catalogue__count {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-2);
+}

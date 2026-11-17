@@ -8,6 +8,10 @@ import {
   type CustomEquipment,
   type Inventory,
 } from '../../domain/inventory/inventory';
+import {
+  customExercisesUsing,
+  type CustomExercise,
+} from '../../domain/repertoire/customExercise';
 import type { ValidationError } from '../../domain/validation';
 import { ChoiceGroup } from '../form/ChoiceGroup';
 import { FormFooter } from '../form/FormFooter';
@@ -16,6 +20,8 @@ import { useSubmitStatus } from '../form/useSubmitStatus';
 
 interface InventoryFormProps {
   stored: Inventory | undefined;
+  /** Custom Exercises, which keep the Custom Equipment they require from being removed. */
+  customExercises?: readonly CustomExercise[];
   submitLabel: string;
   confirmSaved?: boolean;
   onSubmit: (inventory: Inventory) => Promise<void>;
@@ -54,6 +60,7 @@ const toggle = <Item,>(items: readonly Item[], item: Item): Item[] =>
 
 export function InventoryForm({
   stored,
+  customExercises = [],
   submitLabel,
   confirmSaved = false,
   onSubmit,
@@ -77,6 +84,9 @@ export function InventoryForm({
   const [rowErrors, setRowErrors] = useState<
     Partial<Record<string, ValidationError>>
   >({});
+  const [blockedRemovals, setBlockedRemovals] = useState<
+    Partial<Record<string, string>>
+  >({});
   const { status, run, reset } = useSubmitStatus();
 
   const nameError = (error: ValidationError | undefined) => {
@@ -98,6 +108,20 @@ export function InventoryForm({
       { id: crypto.randomUUID(), name, label: name },
     ]);
     setNewName('');
+    reset();
+  };
+
+  const removeCustom = (id: string) => {
+    const users = customExercisesUsing(customExercises, id);
+    if (users.length > 0) {
+      const names = users.map((exercise) => exercise.name).join(', ');
+      setBlockedRemovals((blocked) => ({
+        ...blocked,
+        [id]: t('errors.equipmentInUse', { names }),
+      }));
+      return;
+    }
+    setCustom((rows) => rows.filter((item) => item.id !== id));
     reset();
   };
 
@@ -182,16 +206,15 @@ export function InventoryForm({
                     );
                     reset();
                   }}
-                  error={nameError(rowErrors[row.id])}
+                  error={
+                    blockedRemovals[row.id] ?? nameError(rowErrors[row.id])
+                  }
                 />
                 <button
                   type="button"
                   className="button button--quiet"
                   onClick={() => {
-                    setCustom((rows) =>
-                      rows.filter((item) => item.id !== row.id),
-                    );
-                    reset();
+                    removeCustom(row.id);
                   }}
                 >
                   {t('inventory.remove', { name: row.label })}

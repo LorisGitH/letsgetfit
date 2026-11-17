@@ -5,10 +5,17 @@ import { contentLanguage, imageUrl } from './contentLanguage';
 
 interface ExerciseDetailProps {
   exercise: Exercise;
+  inRepertoire: boolean;
+  onToggleRepertoire: () => void;
   onBack: () => void;
 }
 
-export function ExerciseDetail({ exercise, onBack }: ExerciseDetailProps) {
+export function ExerciseDetail({
+  exercise,
+  inRepertoire,
+  onToggleRepertoire,
+  onBack,
+}: ExerciseDetailProps) {
   const { t, i18n } = useTranslation();
   const instructionsId = useId();
   const language = contentLanguage(i18n.language);
@@ -20,6 +27,13 @@ export function ExerciseDetail({ exercise, onBack }: ExerciseDetailProps) {
         {t('catalogue.backToList')}
       </button>
       <h2>{name}</h2>
+      <button
+        type="button"
+        className={inRepertoire ? 'button button--quiet' : 'button'}
+        onClick={onToggleRepertoire}
+      >
+        {t(inRepertoire ? 'repertoire.remove' : 'repertoire.add')}
+      </button>
 
       {exercise.images.length > 0 && (
         <div className="exercise__images">

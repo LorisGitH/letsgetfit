@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { I18nextProvider } from 'react-i18next';
 import { describe, expect, it, vi } from 'vitest';
 import type { Inventory } from '../../domain/inventory/inventory';
+import { EMPTY_REPERTOIRE } from '../../domain/repertoire/repertoire';
 import { createI18n, type Language } from '../i18n/i18n';
 import { CatalogueScreen } from './CatalogueScreen';
 
@@ -13,7 +14,12 @@ function renderCatalogue(language: Language = 'en', inventory = noEquipment) {
   const onBack = vi.fn();
   render(
     <I18nextProvider i18n={createI18n(language)}>
-      <CatalogueScreen onBack={onBack} inventory={inventory} />
+      <CatalogueScreen
+        onBack={onBack}
+        inventory={inventory}
+        repertoire={EMPTY_REPERTOIRE}
+        onToggleRepertoire={vi.fn()}
+      />
     </I18nextProvider>,
   );
   return { onBack };

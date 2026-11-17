@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { onboardingStep } from '../../domain/athlete/athlete';
+import { EMPTY_INVENTORY } from '../../domain/inventory/inventory';
 import { useAthlete } from '../athlete/athleteContext';
 import { BodyStatsForm } from '../athlete/BodyStatsForm';
 import { GoalForm } from '../athlete/GoalForm';
 import { InventoryForm } from '../athlete/InventoryForm';
 import { TrainingForm } from '../athlete/TrainingForm';
 import { DisclaimerStep } from './DisclaimerStep';
+import { RepertoireStep } from './RepertoireStep';
 
 const STEPS = [
   'disclaimer',
@@ -13,6 +15,7 @@ const STEPS = [
   'bodyStats',
   'training',
   'equipment',
+  'exercises',
 ] as const;
 
 /** First-run flow: each step is saved as soon as it is done, so closing the app loses nothing. */
@@ -69,6 +72,13 @@ export function Onboarding() {
           stored={athlete.inventory}
           submitLabel={t('common.continue')}
           onSubmit={(inventory) => save({ ...athlete, inventory })}
+        />
+      )}
+      {step === 'exercises' && (
+        <RepertoireStep
+          inventory={athlete.inventory ?? EMPTY_INVENTORY}
+          stored={athlete.repertoire}
+          onContinue={(repertoire) => save({ ...athlete, repertoire })}
         />
       )}
     </section>
