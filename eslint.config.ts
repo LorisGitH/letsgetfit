@@ -42,6 +42,15 @@ export default defineConfig(
     },
   },
   {
+    rules: {
+      // `const { omitted: _, ...rest } = value` is the idiomatic way to drop a field.
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { ignoreRestSiblings: true },
+      ],
+    },
+  },
+  {
     files: ['src/**/*.{ts,tsx}'],
     extends: [reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
     languageOptions: { globals: globals.browser },
