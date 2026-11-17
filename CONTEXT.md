@@ -22,6 +22,14 @@ _Avoid_: Recomp, toning
 A body region the Athlete wants to prioritise (e.g. belly, arms). It shapes which muscles get extra work; it does not mean fat is burned from that region specifically.
 _Avoid_: Spot reduction, target zone, problem area
 
+**Muscle**:
+One of the fixed muscle groups Exercises are tagged with (e.g. abdominals, lats, quadriceps). Each Focus Area maps to one or more Muscles.
+_Avoid_: Muscle group, body part
+
+**Joint**:
+One of the fixed joints or regions an Exercise can strain (e.g. knee, lower back, wrist). Limitations are expressed as Joints.
+_Avoid_: Articulation, body part
+
 **Limitation**:
 A joint or body region the Athlete must spare (e.g. knee, lower back). Generated Plans leave out Exercises that strain it; the Athlete may still add one back by hand.
 _Avoid_: Injury, condition, restriction
