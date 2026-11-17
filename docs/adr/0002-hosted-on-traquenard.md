@@ -1,0 +1,3 @@
+# Hosted on traquenard, not a static host
+
+letsgetfit is a Project in the `loris` Tenant on traquenard, served at `letsgetfit.lallard.com`, rather than on GitHub Pages or a free static host. GitHub Pages would need the repo public or a paid plan, and traquenard already gives HTTPS, deploys through Flux, and has the Shared Postgres that accounts and sync will need later. What the repo owes the Cluster: a public arm64 image on `ghcr.io/lorisgith/letsgetfit` running an unprivileged web server on a non-root port with a `Content-Security-Policy` header, built on every push to `main`; traquenard's bump workflow then rolls each new tag out.

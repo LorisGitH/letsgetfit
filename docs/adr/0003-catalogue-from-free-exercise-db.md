@@ -1,0 +1,3 @@
+# Catalogue seeded from free-exercise-db
+
+The Catalogue is the home-equipment subset of [free-exercise-db](https://github.com/yuhonas/free-exercise-db), chosen because it is released under the Unlicense (public domain) and so carries no terms that clash with letsgetfit's PolyForm Noncommercial licence. We trim it to Exercises doable at home and add what it lacks: precise Equipment tags (its single coarse equipment field has no push-up bars, for example), the joints each Exercise strains (for Limitations), and reviewed French translations, all committed as data. Exercises from a source with an incompatible licence must not be mixed in.

@@ -1,0 +1,3 @@
+# Local-first storage, Postgres later
+
+The Athlete's data lives only on their device, in IndexedDB (through Dexie), and there is no backend. This keeps the first version free to host, fully offline at the gym, and free of personal data on a server, at the cost of no sync between phone and laptop. JSON export and import cover moving data and backups, and the app asks the browser for persistent storage because browsers (Safari especially) may evict a site's storage after weeks without visits. All storage sits behind repository interfaces so the domain never depends on Dexie. When accounts arrive, data will sync to a database in traquenard's Shared Postgres.
