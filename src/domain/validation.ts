@@ -1,4 +1,5 @@
-export type ValidationError = 'required' | 'invalid' | 'tooLow' | 'tooHigh';
+export type ValidationError =
+  'required' | 'invalid' | 'tooLow' | 'tooHigh' | 'duplicate';
 
 export type FieldErrors<Field extends string> = Partial<
   Record<Field, ValidationError>

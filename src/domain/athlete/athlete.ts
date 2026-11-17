@@ -1,4 +1,5 @@
 import type { Joint } from '../body/joint';
+import type { Inventory } from '../inventory/inventory';
 import type { FocusArea } from '../objectives/focusArea';
 import type { Goal } from '../objectives/goal';
 import type { UnitSystem } from '../units/unitSystem';
@@ -21,12 +22,13 @@ export interface Athlete {
   bodyStats?: BodyStats;
   experienceLevel?: ExperienceLevel;
   availability?: Availability;
+  inventory?: Inventory;
 }
 
 export const NEW_ATHLETE: Athlete = { unitSystem: 'metric' };
 
 export type OnboardingStep =
-  'disclaimer' | 'goal' | 'bodyStats' | 'training' | 'complete';
+  'disclaimer' | 'goal' | 'bodyStats' | 'training' | 'equipment' | 'complete';
 
 export function onboardingStep(athlete: Athlete): OnboardingStep {
   if (athlete.disclaimerAcceptedAt === undefined) return 'disclaimer';
@@ -38,5 +40,6 @@ export function onboardingStep(athlete: Athlete): OnboardingStep {
   ) {
     return 'training';
   }
+  if (athlete.inventory === undefined) return 'equipment';
   return 'complete';
 }
