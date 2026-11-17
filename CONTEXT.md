@@ -37,7 +37,7 @@ _Avoid_: Injury, condition, restriction
 ### Exercises and equipment
 
 **Exercise**:
-A named movement, tagged with the muscles it works, the joints it strains, and the Equipment it requires. Every Exercise is either Strength (measured in sets and reps or load) or Cardio (measured in duration or distance).
+A named movement, tagged with the muscles it works, the joints it strains, the Equipment it requires, and any Equipment it can optionally use (e.g. push-up bars for push-ups). Every Exercise is either Strength (measured in sets and reps or load) or Cardio (measured in duration or distance).
 _Avoid_: Move, drill, activity
 
 **Cardio Habit**:

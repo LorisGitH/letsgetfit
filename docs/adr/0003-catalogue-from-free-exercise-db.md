@@ -1,3 +1,5 @@
 # Catalogue seeded from free-exercise-db
 
 The Catalogue is the home-equipment subset of [free-exercise-db](https://github.com/yuhonas/free-exercise-db), chosen because it is released under the Unlicense (public domain) and so carries no terms that clash with letsgetfit's PolyForm Noncommercial licence. We trim it to Exercises doable at home and add what it lacks: precise Equipment tags (its single coarse equipment field has no push-up bars, for example), the joints each Exercise strains (for Limitations), and reviewed French translations, all committed as data. Exercises from a source with an incompatible licence must not be mixed in.
+
+The import (`pnpm catalogue:import`) is pinned to one source commit and is repeatable: it keeps strength, plyometric and cardio records doable with home Equipment and with instructions, tags Equipment by rules plus hand-reviewed overrides, and re-encodes the images as 600px WebP with a content hash in each name (about 12 MB, committed so builds need no network). Stretching is left out until Exercises gain a mobility kind.
