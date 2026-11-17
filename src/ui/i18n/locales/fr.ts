@@ -86,6 +86,8 @@ export const fr: Translation = {
       'Impossible de charger les exercices. Rechargez la page pour réessayer.',
     primaryMuscles: 'Muscles principaux',
     secondaryMuscles: 'Travaille aussi',
+    strainedJoints: 'Sollicite',
+    noJointStrain: 'Aucune articulation particulièrement sollicitée',
     requiredEquipment: 'Matériel',
     noEquipmentNeeded: 'Aucun matériel nécessaire',
     optionalEquipment: 'Peut utiliser',

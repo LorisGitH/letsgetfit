@@ -95,6 +95,10 @@ describe('Catalogue browser', () => {
       screen.getByRole('list', { name: 'Instructions' }).children.length,
     ).toBeGreaterThan(1);
     expect(screen.getByText('No equipment needed')).toBeInTheDocument();
+    const strains = screen.getByText('Strains', { selector: 'dt' });
+    expect(strains.nextElementSibling).toHaveTextContent(
+      'Shoulder, Elbow, Wrist',
+    );
     expect(screen.getByText('Push-up bars')).toBeInTheDocument();
     expect(
       screen.getAllByRole('img', { name: /^Pushups, step \d$/ }).length,

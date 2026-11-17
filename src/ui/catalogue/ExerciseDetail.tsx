@@ -58,6 +58,14 @@ export function ExerciseDetail({ exercise, onBack }: ExerciseDetailProps) {
             </dd>
           </>
         )}
+        <dt>{t('catalogue.strainedJoints')}</dt>
+        <dd>
+          {exercise.strainedJoints.length > 0
+            ? exercise.strainedJoints
+                .map((joint) => t(`joints.${joint}`))
+                .join(', ')
+            : t('catalogue.noJointStrain')}
+        </dd>
         <dt>{t('catalogue.requiredEquipment')}</dt>
         <dd>
           {exercise.requiredEquipment.length > 0
