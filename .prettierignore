@@ -1,3 +1,5 @@
 pnpm-lock.yaml
 dist
 coverage
+# Written by scripts/catalogue/import.ts
+src/domain/catalogue/exercises.json
