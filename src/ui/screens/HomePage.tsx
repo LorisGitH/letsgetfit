@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useAthlete } from '../athlete/athleteContext';
+import { PlanSection } from '../plan/PlanSection';
 
 interface HomePageProps {
   onEditProfile: () => void;
@@ -27,8 +28,8 @@ export function HomePage({
 
   return (
     <section className="page">
+      <PlanSection />
       <h2>{t('home.title')}</h2>
-      <p>{t('home.planComing')}</p>
       <dl className="summary">
         {goal && (
           <>

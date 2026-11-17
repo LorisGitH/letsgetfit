@@ -4,6 +4,7 @@ import type { CustomExercise } from '../repertoire/customExercise';
 import type { Repertoire } from '../repertoire/repertoire';
 import type { FocusArea } from '../objectives/focusArea';
 import type { Goal } from '../objectives/goal';
+import type { Plan } from '../plan/plan';
 import type { UnitSystem } from '../units/unitSystem';
 import type { Availability } from './availability';
 import type { BodyStats } from './bodyStats';
@@ -27,6 +28,7 @@ export interface Athlete {
   inventory?: Inventory;
   repertoire?: Repertoire;
   customExercises?: readonly CustomExercise[];
+  plan?: Plan;
 }
 
 export const NEW_ATHLETE: Athlete = { unitSystem: 'metric' };

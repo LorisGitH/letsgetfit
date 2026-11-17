@@ -86,6 +86,10 @@ _Avoid_: Program, routine, schedule, workout plan
 One workout on one weekday of the Plan, made of Strength Exercises, Cardio Exercises, or both, each with its Target.
 _Avoid_: Workout, training, class
 
+**Session Focus**:
+The part of the body a Session trains: full body, upper, lower, push, pull or legs. The number of Training Days decides how a week's Sessions are focused.
+_Avoid_: Split, routine type, day type
+
 **Target**:
 What a Session asks for one Exercise: sets and reps or load for Strength, duration or distance for Cardio.
 _Avoid_: Prescription, goal, objective
