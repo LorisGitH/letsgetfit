@@ -1,0 +1,68 @@
+# Builds the container image, checks it, and on every push to main publishes it to GHCR as
+# ghcr.io/lorisgith/letsgetfit:main-<commit unix time>-<short sha>. traquenard's bump
+# workflow orders tags by that timestamp (ADR 0002). Pull requests build and check the image
+# without publishing it.
+#
+# GHCR creates a package private on its first push; set it to public once in the package
+# settings, or the Cluster can't pull it.
+# https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+name: image
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: image-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  image:
+    # Native arm64, the Server's architecture, so the image is run and checked without emulation.
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Node and pnpm pinned in mise.toml
+        uses: jdx/mise-action@v5
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+      - name: Lint the smoke script
+        run: shellcheck deploy/smoke.sh
+
+      - name: Build the image
+        run: |
+          echo "tag=main-$(git show -s --format=%ct HEAD)-$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
+          docker build --platform linux/arm64 -t letsgetfit:test .
+
+      - name: Runs as a non-root user
+        run: |
+          uid=$(docker run --rm --entrypoint id letsgetfit:test -u)
+          [ "$uid" != 0 ] || { echo "the container runs as root" >&2; exit 1; }
+
+      - name: Smoke check
+        run: |
+          docker run -d --name app -p 8080:8080 letsgetfit:test
+          for _ in $(seq 20); do curl -fs -o /dev/null http://localhost:8080/ && ready=1 && break; sleep 1; done
+          [ -n "${ready:-}" ] || { docker logs app; echo "the container never answered" >&2; exit 1; }
+          deploy/smoke.sh http://localhost:8080 || { docker logs app; exit 1; }
+
+      - name: Push to GHCR
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          image="ghcr.io/lorisgith/letsgetfit:${tag}"
+          echo "$GITHUB_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          docker tag letsgetfit:test "$image"
+          docker push "$image"
+          echo "Pushed $image" >> "$GITHUB_STEP_SUMMARY"
