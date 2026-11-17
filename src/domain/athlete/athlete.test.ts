@@ -56,6 +56,7 @@ describe('onboardingStep', () => {
           sessionMinutes: 30,
         },
         inventory: { equipment: ['dumbbells'], customEquipment: [] },
+        repertoire: { catalogue: ['pushups'], custom: [] },
       }),
     ).toBe('complete');
   });
@@ -72,11 +73,33 @@ describe('onboardingStep with equipment', () => {
     expect(onboardingStep(trained)).toBe('equipment');
   });
 
-  it('is complete once an Inventory is saved, even an empty one', () => {
+  it('moves on once an Inventory is saved, even an empty one', () => {
     expect(
       onboardingStep({
         ...trained,
         inventory: { equipment: [], customEquipment: [] },
+      }),
+    ).toBe('exercises');
+  });
+});
+
+describe('onboardingStep with exercises', () => {
+  const equipped: Athlete = {
+    ...withBodyStats,
+    experienceLevel: 'beginner',
+    availability: { trainingDays: ['monday'], sessionMinutes: 30 },
+    inventory: { equipment: [], customEquipment: [] },
+  };
+
+  it('asks for exercises once the equipment is saved', () => {
+    expect(onboardingStep(equipped)).toBe('exercises');
+  });
+
+  it('is complete once a Repertoire is saved', () => {
+    expect(
+      onboardingStep({
+        ...equipped,
+        repertoire: { catalogue: ['pushups'], custom: [] },
       }),
     ).toBe('complete');
   });
