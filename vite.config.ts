@@ -31,6 +31,19 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest}'],
         navigateFallback: '/index.html',
         cleanupOutdatedCaches: true,
+        // Catalogue images are too many to precache: each is kept once viewed, so it shows
+        // offline afterwards. Names carry a content hash, so a cached copy never goes stale.
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) =>
+              url.pathname.startsWith('/catalogue/images/'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'catalogue-images',
+              expiration: { maxEntries: 1000 },
+            },
+          },
+        ],
       },
     }),
   ],

@@ -79,6 +79,22 @@ style=$(grep -o 'href="/assets/[^"]*\.css"' <<<"$page" | head -1 | sed 's/^href=
 if [[ -n "$script" ]]; then check_file "$script" javascript immutable; else bad "the page loads no /assets/ script"; fi
 if [[ -n "$style" ]]; then check_file "$style" text/css immutable; else bad "the page loads no /assets/ stylesheet"; fi
 
+# The Catalogue: its data chunk, which the entry script loads on demand, and one image it lists.
+entry=$(curl -s -m 15 "$base$script")
+# The entry script imports it relative to itself, e.g. import(`./exercises-<hash>.js`).
+catalogue_chunk=$(grep -o 'exercises-[A-Za-z0-9_-]*\.js' <<<"$entry" | head -1)
+if [[ -n "$catalogue_chunk" ]]; then
+  check_file "/assets/$catalogue_chunk" javascript immutable
+  image=$(grep -o '[a-z0-9-]*-[0-9]-[0-9a-f]\{10\}\.webp' "$body_file" | head -1)
+  if [[ -n "$image" ]]; then
+    check_file "/catalogue/images/$image" image/webp immutable
+  else
+    bad "the Catalogue chunk lists no image"
+  fi
+else
+  bad "the entry script does not load the Catalogue chunk"
+fi
+
 # Offline support: registration script, service worker and the Workbox runtime it imports.
 if grep -q 'src="/registerSW.js"' <<<"$page"; then
   pass "the page registers the service worker"
@@ -102,7 +118,7 @@ check_file /apple-touch-icon-180x180.png image/png long
 check_file /favicon.svg image/svg+xml long
 
 # Nothing else is served.
-for path in /no-such-page /assets/no-such-file.js /50x.html; do
+for path in /no-such-page /assets/no-such-file.js /catalogue/images/no-such-image.webp /50x.html; do
   fetch "$path"
   if [[ "$status" == 404 ]]; then pass "$path returns 404"; else bad "$path returned ${status:-none}, not 404"; fi
 done

@@ -27,6 +27,10 @@ The code is split into layers, and ESLint enforces which may import which:
 
 Domain logic is written test-first. Commit messages follow [Conventional Commits](https://www.conventionalcommits.org).
 
+## Exercise catalogue
+
+The built-in Catalogue comes from [free-exercise-db](https://github.com/yuhonas/free-exercise-db), which is in the public domain ([ADR 0003](docs/adr/0003-catalogue-from-free-exercise-db.md)). `pnpm catalogue:import` rebuilds it at the pinned source commit. Pass `--commit <sha>` to move to another commit. The import writes `src/domain/catalogue/exercises.json` and `public/catalogue/images/`; commit both. The rules that choose and tag exercises are in [`scripts/catalogue/tagging.ts`](scripts/catalogue/tagging.ts).
+
 ## Deployment
 
 letsgetfit is an installable PWA that works offline. Its icons are generated at build time from [`public/favicon.svg`](public/favicon.svg). It runs as a Project on traquenard ([ADR 0002](docs/adr/0002-hosted-on-traquenard.md)):

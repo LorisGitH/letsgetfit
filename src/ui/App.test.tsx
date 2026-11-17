@@ -239,6 +239,21 @@ describe('First-run onboarding', () => {
   });
 });
 
+describe('Home', () => {
+  it('opens the exercise catalogue', async () => {
+    const user = userEvent.setup();
+    renderApp(createInMemoryAthleteRepository(onboarded));
+
+    await user.click(
+      await screen.findByRole('button', { name: 'Browse exercises' }),
+    );
+
+    expect(
+      await screen.findByRole('heading', { name: 'Exercise catalogue' }),
+    ).toBeInTheDocument();
+  });
+});
+
 describe('Profile', () => {
   it('shows the Goal on the home screen', async () => {
     renderApp(createInMemoryAthleteRepository(onboarded));
