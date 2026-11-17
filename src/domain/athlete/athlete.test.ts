@@ -5,8 +5,14 @@ const accepted: Athlete = {
   unitSystem: 'metric',
   disclaimerAcceptedAt: '2026-11-17T10:00:00.000Z',
 };
-const withBodyStats: Athlete = {
+const withGoal: Athlete = {
   ...accepted,
+  goal: 'loseFat',
+  focusAreas: ['bellyAndWaist'],
+  limitations: [],
+};
+const withBodyStats: Athlete = {
+  ...withGoal,
   bodyStats: {
     dateOfBirth: '1990-06-15',
     sex: 'male',
@@ -20,8 +26,12 @@ describe('onboardingStep', () => {
     expect(onboardingStep(NEW_ATHLETE)).toBe('disclaimer');
   });
 
-  it('asks for Body Stats once the disclaimer is accepted', () => {
-    expect(onboardingStep(accepted)).toBe('bodyStats');
+  it('asks for the Goal once the disclaimer is accepted', () => {
+    expect(onboardingStep(accepted)).toBe('goal');
+  });
+
+  it('asks for Body Stats once the Goal is chosen', () => {
+    expect(onboardingStep(withGoal)).toBe('bodyStats');
   });
 
   it('asks for training details until Experience Level and Availability are both set', () => {

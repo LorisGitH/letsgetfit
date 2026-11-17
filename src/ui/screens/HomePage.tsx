@@ -8,28 +8,52 @@ interface HomePageProps {
 export function HomePage({ onEditProfile }: HomePageProps) {
   const { t } = useTranslation();
   const { athlete } = useAthlete();
-  const { availability, experienceLevel } = athlete;
+  const {
+    goal,
+    focusAreas = [],
+    limitations = [],
+    availability,
+    experienceLevel,
+  } = athlete;
+  const listOrNone = (items: readonly string[]) =>
+    items.length > 0 ? items.join(', ') : t('home.none');
 
   return (
     <section className="page">
       <h2>{t('home.title')}</h2>
       <p>{t('home.planComing')}</p>
-      {availability && experienceLevel && (
-        <dl className="summary">
-          <dt>{t('home.trainingDays')}</dt>
-          <dd>
-            {availability.trainingDays
-              .map((day) => t(`weekdays.${day}`))
-              .join(', ')}
-          </dd>
-          <dt>{t('home.sessionMinutes')}</dt>
-          <dd>
-            {t('training.minutes', { minutes: availability.sessionMinutes })}
-          </dd>
-          <dt>{t('home.experienceLevel')}</dt>
-          <dd>{t(`training.${experienceLevel}`)}</dd>
-        </dl>
-      )}
+      <dl className="summary">
+        {goal && (
+          <>
+            <dt>{t('home.goal')}</dt>
+            <dd>{t(`goal.${goal}`)}</dd>
+          </>
+        )}
+        <dt>{t('home.focusAreas')}</dt>
+        <dd>{listOrNone(focusAreas.map((area) => t(`focusAreas.${area}`)))}</dd>
+        <dt>{t('home.limitations')}</dt>
+        <dd>{listOrNone(limitations.map((joint) => t(`joints.${joint}`)))}</dd>
+        {availability && (
+          <>
+            <dt>{t('home.trainingDays')}</dt>
+            <dd>
+              {availability.trainingDays
+                .map((day) => t(`weekdays.${day}`))
+                .join(', ')}
+            </dd>
+            <dt>{t('home.sessionMinutes')}</dt>
+            <dd>
+              {t('training.minutes', { minutes: availability.sessionMinutes })}
+            </dd>
+          </>
+        )}
+        {experienceLevel && (
+          <>
+            <dt>{t('home.experienceLevel')}</dt>
+            <dd>{t(`training.${experienceLevel}`)}</dd>
+          </>
+        )}
+      </dl>
       <button type="button" className="button" onClick={onEditProfile}>
         {t('home.editProfile')}
       </button>
