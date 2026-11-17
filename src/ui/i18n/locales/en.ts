@@ -75,6 +75,7 @@ export const en = {
     allMuscles: 'All muscles',
     equipment: 'Equipment',
     allEquipment: 'All equipment',
+    onlyAllowed: 'Only what my equipment allows',
     noEquipment: 'No equipment',
     results: 'Exercises',
     count_one: '{{count}} exercise',
@@ -131,6 +132,20 @@ export const en = {
     rowingMachine: 'Rowing machine',
     elliptical: 'Elliptical trainer',
     bicycle: 'Bicycle',
+  },
+  inventory: {
+    title: 'Your equipment',
+    intro:
+      'Tick everything you own. Exercises that need no equipment are always available.',
+    strength: 'Training equipment',
+    cardio: 'Cardio machines and bike',
+    custom: 'Your own equipment',
+    customHint:
+      'Equipment not in the list, e.g. a TRX strap or a weighted vest. Only exercises you create yourself can use it.',
+    addCustom: 'Add your own',
+    add: 'Add',
+    customName: 'Name of {{name}}',
+    remove: 'Remove {{name}}',
   },
   units: {
     label: 'Units',
@@ -189,6 +204,9 @@ export const en = {
     heightRange: 'Enter a height between {{min}} and {{max}}.',
     weightRange: 'Enter a weight between {{min}} and {{max}}.',
     trainingDays: 'Pick at least one day.',
+    customNameRequired: 'Enter a name.',
+    customNameTooLong: 'Use {{max}} characters or fewer.',
+    customNameDuplicate: 'You already have equipment with this name.',
   },
   home: {
     title: "You're all set",
@@ -201,6 +219,7 @@ export const en = {
     trainingDays: 'Training days',
     sessionMinutes: 'Session length',
     experienceLevel: 'Experience level',
+    equipment: 'Equipment',
     editProfile: 'Edit profile',
     browseCatalogue: 'Browse exercises',
   },

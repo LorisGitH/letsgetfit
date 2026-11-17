@@ -3,10 +3,17 @@ import { onboardingStep } from '../../domain/athlete/athlete';
 import { useAthlete } from '../athlete/athleteContext';
 import { BodyStatsForm } from '../athlete/BodyStatsForm';
 import { GoalForm } from '../athlete/GoalForm';
+import { InventoryForm } from '../athlete/InventoryForm';
 import { TrainingForm } from '../athlete/TrainingForm';
 import { DisclaimerStep } from './DisclaimerStep';
 
-const STEPS = ['disclaimer', 'goal', 'bodyStats', 'training'] as const;
+const STEPS = [
+  'disclaimer',
+  'goal',
+  'bodyStats',
+  'training',
+  'equipment',
+] as const;
 
 /** First-run flow: each step is saved as soon as it is done, so closing the app loses nothing. */
 export function Onboarding() {
@@ -55,6 +62,13 @@ export function Onboarding() {
           onSubmit={(experienceLevel, availability) =>
             save({ ...athlete, experienceLevel, availability })
           }
+        />
+      )}
+      {step === 'equipment' && (
+        <InventoryForm
+          stored={athlete.inventory}
+          submitLabel={t('common.continue')}
+          onSubmit={(inventory) => save({ ...athlete, inventory })}
         />
       )}
     </section>

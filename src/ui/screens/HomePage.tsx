@@ -15,6 +15,7 @@ export function HomePage({ onEditProfile, onBrowseCatalogue }: HomePageProps) {
     limitations = [],
     availability,
     experienceLevel,
+    inventory,
   } = athlete;
   const listOrNone = (items: readonly string[]) =>
     items.length > 0 ? items.join(', ') : t('home.none');
@@ -52,6 +53,17 @@ export function HomePage({ onEditProfile, onBrowseCatalogue }: HomePageProps) {
           <>
             <dt>{t('home.experienceLevel')}</dt>
             <dd>{t(`training.${experienceLevel}`)}</dd>
+          </>
+        )}
+        {inventory && (
+          <>
+            <dt>{t('home.equipment')}</dt>
+            <dd>
+              {listOrNone([
+                ...inventory.equipment.map((item) => t(`equipment.${item}`)),
+                ...inventory.customEquipment.map((item) => item.name),
+              ])}
+            </dd>
           </>
         )}
       </dl>

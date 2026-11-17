@@ -77,6 +77,7 @@ export const fr: Translation = {
     allMuscles: 'Tous les muscles',
     equipment: 'Matériel',
     allEquipment: 'Tout le matériel',
+    onlyAllowed: 'Uniquement ce que mon matériel permet',
     noEquipment: 'Sans matériel',
     results: 'Exercices',
     count_one: '{{count}} exercice',
@@ -134,6 +135,20 @@ export const fr: Translation = {
     rowingMachine: 'Rameur',
     elliptical: 'Vélo elliptique',
     bicycle: 'Vélo',
+  },
+  inventory: {
+    title: 'Votre matériel',
+    intro:
+      'Cochez tout ce que vous possédez. Les exercices sans matériel sont toujours disponibles.',
+    strength: "Matériel d'entraînement",
+    cardio: 'Appareils de cardio et vélo',
+    custom: 'Votre propre matériel',
+    customHint:
+      "Du matériel absent de la liste, par exemple une sangle TRX ou un gilet lesté. Seuls les exercices que vous créez vous-même peuvent l'utiliser.",
+    addCustom: 'Ajouter le vôtre',
+    add: 'Ajouter',
+    customName: 'Nom de {{name}}',
+    remove: 'Retirer {{name}}',
   },
   units: {
     label: 'Unités',
@@ -195,6 +210,9 @@ export const fr: Translation = {
     heightRange: 'Saisissez une taille entre {{min}} et {{max}}.',
     weightRange: 'Saisissez un poids entre {{min}} et {{max}}.',
     trainingDays: 'Choisissez au moins un jour.',
+    customNameRequired: 'Saisissez un nom.',
+    customNameTooLong: 'Utilisez {{max}} caractères au maximum.',
+    customNameDuplicate: 'Vous avez déjà du matériel portant ce nom.',
   },
   home: {
     title: 'Tout est prêt',
@@ -207,6 +225,7 @@ export const fr: Translation = {
     trainingDays: "Jours d'entraînement",
     sessionMinutes: 'Durée des séances',
     experienceLevel: "Niveau d'expérience",
+    equipment: 'Matériel',
     editProfile: 'Modifier le profil',
     browseCatalogue: 'Parcourir les exercices',
   },
