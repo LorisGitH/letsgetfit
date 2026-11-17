@@ -94,8 +94,6 @@ export const fr: Translation = {
     level: 'Niveau',
     instructions: 'Instructions',
     imageAlt: '{{name}}, étape {{step}}',
-    notTranslated:
-      'Le nom et les instructions de cet exercice sont en anglais pour le moment.',
     credit: 'Exercices, instructions et photos issus de',
     creditLicence: '(domaine public).',
     cardio: 'Cardio',

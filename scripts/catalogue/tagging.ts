@@ -104,6 +104,8 @@ export const OVERRIDES: Record<
   Middle_Back_Shrug: { require: ['bench'] },
   // Hands on a dumbbell, though the source says "body only".
   'Close-Grip_Push-Up_off_of_a_Dumbbell': { require: ['dumbbells'] },
+  // Despite the name, hanging knee raises on a pull-up bar.
+  Wind_Sprints: { require: ['pullUpBar'] },
 };
 
 /** Floor push-ups, where push-up bars can replace the hands on the floor. */

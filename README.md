@@ -29,7 +29,7 @@ Domain logic is written test-first. Commit messages follow [Conventional Commits
 
 ## Exercise catalogue
 
-The built-in Catalogue comes from [free-exercise-db](https://github.com/yuhonas/free-exercise-db), which is in the public domain ([ADR 0003](docs/adr/0003-catalogue-from-free-exercise-db.md)). `pnpm catalogue:import` rebuilds it at the pinned source commit. Pass `--commit <sha>` to move to another commit. The import writes `src/domain/catalogue/exercises.json` and `public/catalogue/images/`; commit both. The rules that choose and tag exercises are in [`scripts/catalogue/tagging.ts`](scripts/catalogue/tagging.ts).
+The built-in Catalogue comes from [free-exercise-db](https://github.com/yuhonas/free-exercise-db), which is in the public domain ([ADR 0003](docs/adr/0003-catalogue-from-free-exercise-db.md)). `pnpm catalogue:import` rebuilds it at the pinned source commit. Pass `--commit <sha>` to move to another commit. The import writes `src/domain/catalogue/exercises.json` and `public/catalogue/images/`; commit both. The rules that choose and tag exercises are in [`scripts/catalogue/tagging.ts`](scripts/catalogue/tagging.ts) and [`jointStrain.ts`](scripts/catalogue/jointStrain.ts). The French names and instructions are hand-written in [`scripts/catalogue/translations/fr.json`](scripts/catalogue/translations/fr.json). The import refuses to run if any exercise is missing French, has a different number of steps, or if a translation no longer matches a kept exercise.
 
 ## Deployment
 

@@ -6,12 +6,11 @@ import type { Equipment } from './equipment';
 export const EXERCISE_KINDS = ['strength', 'cardio'] as const;
 export type ExerciseKind = (typeof EXERCISE_KINDS)[number];
 
-/** Languages Catalogue content is written in; English is always present. */
-export type ContentLanguage = 'en' | 'fr';
+/** Languages every Catalogue Exercise is written in. */
+export const CONTENT_LANGUAGES = ['en', 'fr'] as const;
+export type ContentLanguage = (typeof CONTENT_LANGUAGES)[number];
 
-export type Localized<Content> = { en: Content } & Partial<
-  Record<ContentLanguage, Content>
->;
+export type Localized<Content> = Record<ContentLanguage, Content>;
 
 export interface Exercise {
   id: string;
@@ -32,10 +31,9 @@ export interface Exercise {
   images: readonly string[];
 }
 
-/** Content in the requested language, falling back to English until it is translated. */
 export function localized<Content>(
   content: Localized<Content>,
   language: ContentLanguage,
 ): Content {
-  return content[language] ?? content.en;
+  return content[language];
 }

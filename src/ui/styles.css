@@ -392,12 +392,6 @@ h2 {
   font-size: 1.05rem;
 }
 
-.exercise__note {
-  margin: 0;
-  color: var(--color-muted);
-  font-style: italic;
-}
-
 .exercise__images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));

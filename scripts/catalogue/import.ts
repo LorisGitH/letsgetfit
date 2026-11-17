@@ -1,6 +1,7 @@
 /**
  * Imports the Catalogue from free-exercise-db at a pinned commit (ADR 0003): keeps the home
- * subset, tags Equipment, converts images to WebP and writes the Catalogue file.
+ * subset, tags Equipment and joint strain, merges the reviewed French in
+ * `translations/fr.json`, converts images to WebP and writes the Catalogue file.
  *
  *   pnpm catalogue:import                  re-run at the pinned commit (idempotent)
  *   pnpm catalogue:import --commit <sha>   move to another source commit
@@ -32,6 +33,7 @@ const ROOT = join(import.meta.dirname, '..', '..');
 const CATALOGUE_FILE = join(ROOT, 'src/domain/catalogue/exercises.json');
 const IMAGE_DIR = join(ROOT, 'public/catalogue/images');
 const DOWNLOAD_CACHE = join(ROOT, 'node_modules/.cache/catalogue');
+const FRENCH_FILE = join(import.meta.dirname, 'translations/fr.json');
 
 const IMAGE_WIDTH = 600;
 const WEBP_QUALITY = 70;
@@ -76,8 +78,43 @@ async function convertImage(
   return fileName;
 }
 
+/** A hand-written French name and instructions, keyed by Catalogue id. */
+interface Translation {
+  name: string;
+  instructions: string[];
+}
+
+const french = JSON.parse(await readFile(FRENCH_FILE, 'utf8')) as Record<
+  string,
+  Translation
+>;
+
+/** Every kept Exercise needs French with the same steps; leftovers mean an id changed. */
+function translationProblems(kept: readonly SourceExercise[]): string[] {
+  const keptIds = new Set(kept.map((source) => catalogueId(source.id)));
+  const problems: string[] = [];
+  for (const source of kept) {
+    const id = catalogueId(source.id);
+    const translation = french[id];
+    if (translation === undefined) {
+      problems.push(`${id}: no French`);
+    } else if (translation.instructions.length !== source.instructions.length) {
+      problems.push(
+        `${id}: ${String(translation.instructions.length)} French steps for ${String(source.instructions.length)} English`,
+      );
+    }
+  }
+  for (const id of Object.keys(french)) {
+    if (!keptIds.has(id))
+      problems.push(`${id}: French for an Exercise that isn't kept`);
+  }
+  return problems;
+}
+
 async function toExercise(source: SourceExercise): Promise<Exercise> {
   const id = catalogueId(source.id);
+  const translation = french[id];
+  if (translation === undefined) throw new Error(`${id}: no French`);
   const { required, optional } = tagEquipment(source);
   const images: string[] = [];
   for (const [index, path] of source.images.entries()) {
@@ -86,8 +123,8 @@ async function toExercise(source: SourceExercise): Promise<Exercise> {
   return {
     id,
     kind: kindOf(source),
-    name: { en: source.name },
-    instructions: { en: source.instructions },
+    name: { en: source.name, fr: translation.name },
+    instructions: { en: source.instructions, fr: translation.instructions },
     level: levelOf(source.level),
     primaryMuscles: source.primaryMuscles.map(
       muscleName,
@@ -134,10 +171,17 @@ if (unknownOverrides.length > 0) {
   );
 }
 
+const kept = sources.filter(isHomeExercise);
+const untranslated = translationProblems(kept);
+if (untranslated.length > 0) {
+  throw new Error(
+    `Update ${FRENCH_FILE} first:\n${untranslated.map((problem) => `  - ${problem}`).join('\n')}`,
+  );
+}
+
 await rm(IMAGE_DIR, { recursive: true, force: true });
 await mkdir(IMAGE_DIR, { recursive: true });
 
-const kept = sources.filter(isHomeExercise);
 const exercises = (await inParallel(kept, PARALLEL_DOWNLOADS, toExercise)).sort(
   (a, b) => a.id.localeCompare(b.id),
 );
