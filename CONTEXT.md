@@ -66,6 +66,10 @@ _Avoid_: Kit, my gear
 How trained the Athlete is (Beginner, Intermediate, Advanced). It sets the starting volume and intensity of the Plan.
 _Avoid_: Fitness level, skill level
 
+**Availability**:
+The weekdays the Athlete can train (their Training Days) and how long each Session may last.
+_Avoid_: Schedule, free time, frequency
+
 **Plan**:
 A template week of Sessions that repeats, generated for the Athlete from their Goal, Focus Areas, Repertoire, Inventory, Cardio Habits and availability. The Athlete may edit it.
 _Avoid_: Program, routine, schedule, workout plan
@@ -93,7 +97,7 @@ A record of what the Athlete actually did on a given date, linked to the Session
 _Avoid_: Workout history, entry, log entry, activity
 
 **Body Stats**:
-The Athlete's age, sex, height and weight, used as a baseline and for the Calorie Target.
+The Athlete's date of birth, sex (male, female, or not stated), height and weight, used as a baseline and for the Calorie Target.
 _Avoid_: Profile, biometrics
 
 **Measurement**:
