@@ -1,4 +1,5 @@
 import { EXPERIENCE_LEVELS } from '../athlete/experienceLevel';
+import { JOINTS } from '../body/joint';
 import { MUSCLES } from '../body/muscle';
 import { EQUIPMENT } from './equipment';
 import { EXERCISE_KINDS, type Exercise, type Localized } from './exercise';
@@ -83,6 +84,11 @@ function parseExercise(value: unknown, path: string): Exercise {
       MUSCLES,
       raw.secondaryMuscles,
       `${path}.secondaryMuscles`,
+    ),
+    strainedJoints: listOf(
+      JOINTS,
+      raw.strainedJoints,
+      `${path}.strainedJoints`,
     ),
     requiredEquipment: listOf(
       EQUIPMENT,

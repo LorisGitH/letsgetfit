@@ -1,4 +1,5 @@
 import type { ExperienceLevel } from '../athlete/experienceLevel';
+import type { Joint } from '../body/joint';
 import type { Muscle } from '../body/muscle';
 import type { Equipment } from './equipment';
 
@@ -21,6 +22,8 @@ export interface Exercise {
   level: ExperienceLevel;
   primaryMuscles: readonly Muscle[];
   secondaryMuscles: readonly Muscle[];
+  /** Joints the movement loads; Limitations leave out Exercises straining theirs. */
+  strainedJoints: readonly Joint[];
   /** Everything needed to do the Exercise; empty for bodyweight work. */
   requiredEquipment: readonly Equipment[];
   /** Equipment that can be used but isn't needed, e.g. push-up bars for push-ups. */

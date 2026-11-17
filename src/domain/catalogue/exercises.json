@@ -24,6 +24,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck",
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -53,6 +57,11 @@
         "glutes",
         "hamstrings",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -84,6 +93,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -114,6 +126,9 @@
       "secondaryMuscles": [
         "forearms"
       ],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -143,6 +158,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -171,6 +189,9 @@
       ],
       "secondaryMuscles": [
         "forearms"
+      ],
+      "strainedJoints": [
+        "elbow"
       ],
       "requiredEquipment": [
         "dumbbells",
@@ -207,6 +228,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -234,6 +260,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -265,6 +294,9 @@
         "abdominals",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -300,6 +332,10 @@
         "lowerBack",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -328,6 +364,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -358,6 +397,9 @@
       "secondaryMuscles": [
         "biceps",
         "lats"
+      ],
+      "strainedJoints": [
+        "lowerBack"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -392,6 +434,12 @@
         "lats",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -423,6 +471,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -451,6 +502,9 @@
       ],
       "secondaryMuscles": [
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -485,6 +539,9 @@
         "middleBack",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -513,6 +570,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -545,6 +605,9 @@
         "calves",
         "glutes"
       ],
+      "strainedJoints": [
+        "knee"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -575,6 +638,9 @@
         "adductors"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -606,6 +672,9 @@
         "middleBack",
         "traps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -633,6 +702,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -663,6 +735,11 @@
       "secondaryMuscles": [
         "chest",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [
         "bench"
@@ -697,6 +774,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [
         "bench"
       ],
@@ -730,6 +812,9 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "resistanceBand",
@@ -766,6 +851,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -796,6 +884,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -823,6 +915,10 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -856,6 +952,9 @@
         "lats",
         "shoulders"
       ],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -886,6 +985,9 @@
       "secondaryMuscles": [
         "biceps",
         "lats"
+      ],
+      "strainedJoints": [
+        "lowerBack"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -921,6 +1023,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -949,6 +1056,9 @@
         "calves",
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "knee"
       ],
       "requiredEquipment": [
         "bicycle"
@@ -980,6 +1090,9 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "knee"
+      ],
       "requiredEquipment": [
         "exerciseBike"
       ],
@@ -1009,6 +1122,11 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1038,6 +1156,11 @@
         "abdominals",
         "forearms"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1065,6 +1188,10 @@
       "secondaryMuscles": [
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -1096,6 +1223,10 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1121,6 +1252,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1147,6 +1281,11 @@
       "secondaryMuscles": [
         "biceps",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "wrist",
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -1177,6 +1316,9 @@
       "secondaryMuscles": [
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1204,6 +1346,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1231,6 +1376,9 @@
         "calves"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "ankle"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -1260,6 +1408,9 @@
         "calves"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "ankle"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -1294,6 +1445,11 @@
         "hamstrings",
         "quadriceps"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1322,6 +1478,9 @@
         "abdominals",
         "chest",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -1353,6 +1512,9 @@
         "abdominals",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -1386,6 +1548,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -1417,6 +1582,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -1447,6 +1615,9 @@
         "abdominals",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -1481,6 +1652,10 @@
         "forearms",
         "middleBack"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "pullUpBar"
       ],
@@ -1514,6 +1689,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1543,6 +1723,10 @@
       "secondaryMuscles": [
         "chest",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
       ],
       "requiredEquipment": [
         "dumbbells",
@@ -1577,6 +1761,11 @@
         "chest",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -1604,6 +1793,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1632,6 +1824,9 @@
       ],
       "secondaryMuscles": [
         "forearms"
+      ],
+      "strainedJoints": [
+        "elbow"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -1662,6 +1857,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1689,6 +1887,9 @@
       ],
       "secondaryMuscles": [
         "forearms"
+      ],
+      "strainedJoints": [
+        "elbow"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -1723,6 +1924,9 @@
         "biceps",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -1752,6 +1956,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck",
+        "shoulder"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1781,6 +1989,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -1811,6 +2022,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1839,6 +2053,9 @@
       ],
       "secondaryMuscles": [
         "traps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -1871,6 +2088,7 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -1902,6 +2120,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -1932,6 +2153,9 @@
         "chest"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -1962,6 +2186,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -1994,6 +2221,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [
         "pushUpBars"
@@ -2024,6 +2256,11 @@
       "secondaryMuscles": [
         "chest",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [
         "dipBars"
@@ -2060,6 +2297,10 @@
         "quadriceps",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -2095,6 +2336,9 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -2126,6 +2370,9 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -2156,6 +2403,11 @@
         "glutes",
         "hamstrings",
         "quadriceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -2189,6 +2441,11 @@
         "hamstrings",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -2224,6 +2481,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -2250,6 +2512,11 @@
       "secondaryMuscles": [
         "abdominals",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [
         "exerciseBall"
@@ -2281,6 +2548,9 @@
       ],
       "secondaryMuscles": [
         "forearms"
+      ],
+      "strainedJoints": [
+        "elbow"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -2314,6 +2584,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2346,6 +2619,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2376,6 +2652,9 @@
       ],
       "secondaryMuscles": [
         "forearms"
+      ],
+      "strainedJoints": [
+        "elbow"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -2414,6 +2693,10 @@
         "shoulders",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2443,6 +2726,9 @@
         "chest"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2477,6 +2763,7 @@
         "lats",
         "shoulders"
       ],
+      "strainedJoints": [],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2508,6 +2795,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells",
@@ -2542,6 +2832,10 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2572,6 +2866,9 @@
       ],
       "secondaryMuscles": [
         "middleBack"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells",
@@ -2604,6 +2901,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2634,6 +2934,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2665,6 +2968,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2698,6 +3004,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2728,6 +3037,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2760,6 +3072,9 @@
         "biceps",
         "traps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2790,6 +3105,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -2820,6 +3138,9 @@
       ],
       "secondaryMuscles": [
         "biceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -2853,6 +3174,10 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2881,6 +3206,9 @@
       ],
       "secondaryMuscles": [
         "traps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -2914,6 +3242,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "box"
@@ -2945,6 +3278,9 @@
         "calves"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "ankle"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -2977,6 +3313,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3005,6 +3344,9 @@
         "traps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3033,6 +3375,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3066,6 +3411,10 @@
         "glutes",
         "hamstrings",
         "lowerBack"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -3101,6 +3450,10 @@
         "hamstrings",
         "lowerBack"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -3134,6 +3487,10 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "box"
@@ -3163,6 +3520,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3190,6 +3550,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -3217,6 +3580,9 @@
         "calves",
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "knee"
       ],
       "requiredEquipment": [
         "elliptical"
@@ -3247,6 +3613,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -3276,6 +3645,11 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -3304,6 +3678,9 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -3335,6 +3712,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3364,6 +3744,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -3397,6 +3780,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -3424,6 +3812,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "bench"
       ],
@@ -3452,6 +3843,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "bench"
       ],
@@ -3482,6 +3876,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -3513,6 +3910,9 @@
       ],
       "secondaryMuscles": [
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "lowerBack"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -3546,6 +3946,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -3575,6 +3980,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck",
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -3601,6 +4010,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3630,6 +4042,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -3661,6 +4076,10 @@
         "calves",
         "glutes"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -3689,6 +4108,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3719,6 +4141,11 @@
       "secondaryMuscles": [
         "hamstrings"
       ],
+      "strainedJoints": [
+        "wrist",
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -3748,6 +4175,10 @@
         "glutes",
         "hamstrings",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -3781,6 +4212,11 @@
         "biceps",
         "lats"
       ],
+      "strainedJoints": [
+        "neck",
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "pullUpBar"
       ],
@@ -3810,6 +4246,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -3844,6 +4283,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -3876,6 +4318,12 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "neck",
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -3902,6 +4350,11 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "pullUpBar"
       ],
@@ -3931,6 +4384,11 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "pullUpBar"
       ],
@@ -3961,6 +4419,9 @@
       "secondaryMuscles": [
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -3989,6 +4450,9 @@
         "quadriceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -4023,6 +4487,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -4052,6 +4519,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -4085,6 +4555,9 @@
       "secondaryMuscles": [
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -4117,6 +4590,9 @@
       ],
       "secondaryMuscles": [
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells",
@@ -4153,6 +4629,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -4181,6 +4660,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -4211,6 +4693,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -4242,6 +4727,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4271,6 +4761,11 @@
       "secondaryMuscles": [
         "chest",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -4303,6 +4798,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4333,6 +4833,11 @@
         "abdominals",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -4365,6 +4870,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4392,6 +4902,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -4424,6 +4937,7 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4451,6 +4965,9 @@
         "neck"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4478,6 +4995,9 @@
         "neck"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4508,6 +5028,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4534,6 +5059,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck",
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4560,6 +5089,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck",
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -4586,6 +5119,11 @@
       "secondaryMuscles": [
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
       ],
       "requiredEquipment": [
         "treadmill"
@@ -4615,6 +5153,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -4649,6 +5190,10 @@
         "quadriceps",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4677,6 +5222,10 @@
       "secondaryMuscles": [
         "hamstrings",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -4712,6 +5261,9 @@
         "abdominals",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4744,6 +5296,10 @@
         "middleBack",
         "abdominals"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4774,6 +5330,10 @@
         "shoulders",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4803,6 +5363,10 @@
       "secondaryMuscles": [
         "glutes",
         "lowerBack"
+      ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -4836,6 +5400,10 @@
         "shoulders",
         "abdominals"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4862,6 +5430,10 @@
         "glutes",
         "hamstrings",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -4892,6 +5464,11 @@
       ],
       "secondaryMuscles": [
         "abdominals"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -4926,6 +5503,10 @@
         "hamstrings",
         "shoulders"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4955,6 +5536,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -4983,6 +5567,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -5016,6 +5603,11 @@
         "quadriceps",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -5046,6 +5638,11 @@
       "secondaryMuscles": [
         "quadriceps",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -5078,6 +5675,11 @@
         "hamstrings",
         "quadriceps",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -5112,6 +5714,11 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -5143,6 +5750,11 @@
         "hamstrings",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -5177,6 +5789,11 @@
         "glutes",
         "quadriceps"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5204,6 +5821,10 @@
       ],
       "secondaryMuscles": [
         "abdominals"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "knee"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -5238,6 +5859,11 @@
         "hamstrings",
         "quadriceps"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5264,6 +5890,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -5295,6 +5924,9 @@
       "secondaryMuscles": [
         "hamstrings"
       ],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5322,6 +5954,9 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -5351,6 +5986,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5379,6 +6017,11 @@
       "secondaryMuscles": [
         "calves",
         "quadriceps"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -5409,6 +6052,11 @@
         "calves",
         "glutes",
         "quadriceps"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -5441,6 +6089,11 @@
         "glutes",
         "quadriceps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -5472,6 +6125,9 @@
         "chest",
         "shoulders"
       ],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5502,6 +6158,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5532,6 +6191,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5562,6 +6224,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5595,6 +6260,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -5624,6 +6292,9 @@
       ],
       "secondaryMuscles": [
         "shoulders"
+      ],
+      "strainedJoints": [
+        "lowerBack"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -5656,6 +6327,9 @@
         "hamstrings",
         "quadriceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -5684,6 +6358,9 @@
         "middleBack"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5712,6 +6389,9 @@
         "abductors"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -5742,6 +6422,12 @@
         "hamstrings",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist",
+        "hip"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5769,6 +6455,11 @@
       "secondaryMuscles": [
         "calves",
         "quadriceps"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [],
@@ -5799,6 +6490,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5826,6 +6520,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -5857,6 +6554,9 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells",
@@ -5894,6 +6594,9 @@
         "lats",
         "shoulders"
       ],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -5924,6 +6627,9 @@
         "chest"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5955,6 +6661,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -5988,6 +6697,10 @@
         "shoulders",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6018,6 +6731,11 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6046,6 +6764,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -6079,6 +6800,9 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6108,6 +6832,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6136,6 +6863,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -6168,6 +6898,9 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6195,6 +6928,9 @@
       "secondaryMuscles": [
         "biceps",
         "lats"
+      ],
+      "strainedJoints": [
+        "lowerBack"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -6230,6 +6966,11 @@
         "traps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6264,6 +7005,9 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6295,6 +7039,11 @@
         "hamstrings",
         "quadriceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6325,6 +7074,9 @@
       "secondaryMuscles": [
         "lats",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -6360,6 +7112,10 @@
         "quadriceps",
         "shoulders"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6392,6 +7148,11 @@
         "hamstrings",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6422,6 +7183,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -6452,6 +7216,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -6483,6 +7250,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -6515,6 +7285,10 @@
         "quadriceps",
         "shoulders"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -6543,6 +7317,9 @@
         "lats"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -6574,6 +7351,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -6606,6 +7386,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -6636,6 +7419,9 @@
       "secondaryMuscles": [
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -6662,6 +7448,12 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist",
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -6694,6 +7486,10 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -6723,6 +7519,11 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -6757,6 +7558,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -6784,6 +7590,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -6815,6 +7624,10 @@
       "secondaryMuscles": [
         "biceps",
         "middleBack"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
       ],
       "requiredEquipment": [
         "pullUpBar"
@@ -6849,6 +7662,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -6878,6 +7696,11 @@
         "abdominals",
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [
@@ -6909,6 +7732,11 @@
       "secondaryMuscles": [
         "chest",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [
@@ -6942,6 +7770,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [
         "pushUpBars"
@@ -6974,6 +7807,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -7004,6 +7842,11 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [
@@ -7036,6 +7879,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [
         "pushUpBars"
@@ -7066,6 +7914,9 @@
         "calves",
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "knee"
       ],
       "requiredEquipment": [
         "exerciseBike"
@@ -7099,6 +7950,9 @@
         "chest",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -7128,6 +7982,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -7156,6 +8013,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7187,6 +8047,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7217,6 +8080,11 @@
         "calves",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -7243,6 +8111,10 @@
       "secondaryMuscles": [
         "calves",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "knee",
+        "ankle"
       ],
       "requiredEquipment": [
         "jumpRope"
@@ -7278,6 +8150,10 @@
         "lowerBack",
         "middleBack"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "knee"
+      ],
       "requiredEquipment": [
         "rowingMachine"
       ],
@@ -7307,6 +8183,11 @@
         "calves",
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
       ],
       "requiredEquipment": [
         "treadmill"
@@ -7339,6 +8220,9 @@
       "secondaryMuscles": [
         "lowerBack"
       ],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -7366,6 +8250,10 @@
       "secondaryMuscles": [
         "lats",
         "middleBack"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
       ],
       "requiredEquipment": [
         "pullUpBar"
@@ -7398,6 +8286,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -7427,6 +8320,10 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7457,6 +8354,10 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7487,6 +8388,10 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7516,6 +8421,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7546,6 +8454,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7577,6 +8488,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7608,6 +8522,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7640,6 +8557,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7668,6 +8588,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "bench"
       ],
@@ -7696,6 +8619,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -7724,6 +8650,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7754,6 +8683,9 @@
         "forearms"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7782,6 +8714,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7810,6 +8745,10 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7842,6 +8781,9 @@
         "abdominals",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7871,6 +8813,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -7899,6 +8844,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7931,6 +8879,9 @@
       "secondaryMuscles": [
         "traps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -7962,6 +8913,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -7990,6 +8946,11 @@
       "secondaryMuscles": [
         "shoulders",
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [],
       "optionalEquipment": [
@@ -8020,6 +8981,9 @@
       "secondaryMuscles": [
         "forearms",
         "traps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8052,6 +9016,11 @@
         "calves",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8080,6 +9049,9 @@
       "secondaryMuscles": [
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8107,6 +9079,10 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck",
+        "lowerBack"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8133,6 +9109,10 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -8163,6 +9143,10 @@
       "secondaryMuscles": [
         "glutes",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8195,6 +9179,11 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8226,6 +9215,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8254,6 +9248,10 @@
       "secondaryMuscles": [
         "glutes",
         "hamstrings"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8289,6 +9287,10 @@
         "hamstrings",
         "lowerBack"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee"
+      ],
       "requiredEquipment": [
         "resistanceBand"
       ],
@@ -8318,6 +9320,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8351,6 +9356,10 @@
       "secondaryMuscles": [
         "shoulders"
       ],
+      "strainedJoints": [
+        "elbow",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8379,6 +9388,10 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow",
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8409,6 +9422,9 @@
       "secondaryMuscles": [
         "forearms"
       ],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8437,6 +9453,9 @@
         "calves"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "ankle"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8465,6 +9484,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8496,6 +9518,10 @@
       "secondaryMuscles": [
         "forearms"
       ],
+      "strainedJoints": [
+        "elbow",
+        "wrist"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8525,6 +9551,9 @@
         "shoulders"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8554,6 +9583,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8584,6 +9616,9 @@
       "secondaryMuscles": [
         "biceps",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8616,6 +9651,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8648,6 +9686,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8676,6 +9719,9 @@
         "biceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -8710,6 +9756,9 @@
         "chest",
         "shoulders"
       ],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8743,6 +9792,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8773,6 +9825,9 @@
       "secondaryMuscles": [
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -8801,6 +9856,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8828,6 +9886,9 @@
       "secondaryMuscles": [
         "chest",
         "lats"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -8861,6 +9922,11 @@
         "hamstrings",
         "shoulders"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -8888,6 +9954,10 @@
       "secondaryMuscles": [
         "hamstrings",
         "quadriceps"
+      ],
+      "strainedJoints": [
+        "hip",
+        "knee"
       ],
       "requiredEquipment": [
         "box"
@@ -8920,6 +9990,10 @@
       "secondaryMuscles": [
         "glutes",
         "lowerBack"
+      ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
       ],
       "requiredEquipment": [
         "dumbbells"
@@ -8955,6 +10029,9 @@
         "shoulders",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -8987,6 +10064,10 @@
         "chest",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -9017,6 +10098,9 @@
         "chest",
         "lats",
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "medicineBall"
@@ -9050,6 +10134,9 @@
         "lats",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -9082,6 +10169,10 @@
         "chest",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells",
         "bench"
@@ -9113,6 +10204,11 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -9139,6 +10235,9 @@
         "triceps"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "elbow"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -9169,6 +10268,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -9200,6 +10302,10 @@
         "lowerBack",
         "traps"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -9229,6 +10335,9 @@
         "quadriceps",
         "triceps"
       ],
+      "strainedJoints": [
+        "shoulder"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -9256,6 +10365,9 @@
       ],
       "secondaryMuscles": [
         "triceps"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "kettlebell"
@@ -9286,6 +10398,9 @@
         "biceps",
         "lats"
       ],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "kettlebell"
       ],
@@ -9315,6 +10430,9 @@
       ],
       "secondaryMuscles": [
         "shoulders"
+      ],
+      "strainedJoints": [
+        "shoulder"
       ],
       "requiredEquipment": [
         "resistanceBand"
@@ -9349,6 +10467,10 @@
         "middleBack",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "pullUpBar"
       ],
@@ -9381,6 +10503,11 @@
         "quadriceps",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "dumbbells"
       ],
@@ -9411,6 +10538,7 @@
         "glutes",
         "hamstrings"
       ],
+      "strainedJoints": [],
       "requiredEquipment": [
         "treadmill"
       ],
@@ -9443,6 +10571,10 @@
         "hamstrings",
         "middleBack"
       ],
+      "strainedJoints": [
+        "lowerBack",
+        "hip"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -9474,6 +10606,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "lowerBack"
+      ],
       "requiredEquipment": [
         "exerciseBall"
       ],
@@ -9503,6 +10638,9 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "neck"
+      ],
       "requiredEquipment": [
         "medicineBall"
       ],
@@ -9536,6 +10674,10 @@
         "middleBack",
         "shoulders"
       ],
+      "strainedJoints": [
+        "shoulder",
+        "elbow"
+      ],
       "requiredEquipment": [
         "pullUpBar"
       ],
@@ -9564,6 +10706,11 @@
         "abdominals"
       ],
       "secondaryMuscles": [],
+      "strainedJoints": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
       "requiredEquipment": [],
       "optionalEquipment": [],
       "images": [
@@ -9595,6 +10742,10 @@
       ],
       "secondaryMuscles": [
         "forearms"
+      ],
+      "strainedJoints": [
+        "elbow",
+        "wrist"
       ],
       "requiredEquipment": [
         "dumbbells"

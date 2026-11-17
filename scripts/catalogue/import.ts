@@ -23,6 +23,7 @@ import {
   tagEquipment,
   type SourceExercise,
 } from './tagging.ts';
+import { JOINT_OVERRIDES, strainedJoints } from './jointStrain.ts';
 
 const SOURCE_REPOSITORY = 'yuhonas/free-exercise-db';
 const PINNED_COMMIT = 'f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5';
@@ -94,6 +95,7 @@ async function toExercise(source: SourceExercise): Promise<Exercise> {
     secondaryMuscles: source.secondaryMuscles.map(
       muscleName,
     ) as Exercise['secondaryMuscles'],
+    strainedJoints: strainedJoints(source),
     requiredEquipment: required,
     optionalEquipment: optional,
     images,
@@ -122,9 +124,10 @@ const sources = JSON.parse(
   (await download('dist/exercises.json')).toString('utf8'),
 ) as SourceExercise[];
 
-const unknownOverrides = Object.keys(OVERRIDES).filter(
-  (id) => !sources.some((source) => source.id === id),
-);
+const unknownOverrides = [
+  ...Object.keys(OVERRIDES),
+  ...Object.keys(JOINT_OVERRIDES),
+].filter((id) => !sources.some((source) => source.id === id));
 if (unknownOverrides.length > 0) {
   throw new Error(
     `Overrides name records missing at ${commit}: ${unknownOverrides.join(', ')}`,

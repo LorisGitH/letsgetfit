@@ -10,6 +10,7 @@ const exercise = (id: string, overrides: Partial<Exercise>): Exercise => ({
   level: 'beginner',
   primaryMuscles: ['chest'],
   secondaryMuscles: [],
+  strainedJoints: [],
   requiredEquipment: [],
   optionalEquipment: [],
   images: [],
