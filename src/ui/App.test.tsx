@@ -1,41 +1,9 @@
 // @vitest-environment jsdom
-import { render, screen, within } from '@testing-library/react';
+import { screen, within } from '@testing-library/react';
 import userEvent, { type UserEvent } from '@testing-library/user-event';
-import { I18nextProvider } from 'react-i18next';
 import { describe, expect, it } from 'vitest';
-import type { Athlete } from '../domain/athlete/athlete';
-import type { AthleteRepository } from '../domain/athlete/athleteRepository';
+import { onboarded, renderApp } from '../test/appFixtures';
 import { createInMemoryAthleteRepository } from '../test/inMemoryAthleteRepository';
-import { App } from './App';
-import { createI18n, type Language } from './i18n/i18n';
-
-const onboarded: Athlete = {
-  unitSystem: 'metric',
-  disclaimerAcceptedAt: '2026-11-17T10:00:00.000Z',
-  goal: 'loseFat',
-  focusAreas: ['bellyAndWaist'],
-  limitations: ['knee'],
-  bodyStats: {
-    dateOfBirth: '1990-06-15',
-    sex: 'female',
-    heightCm: 168,
-    weightKg: 62,
-  },
-  experienceLevel: 'beginner',
-  availability: { trainingDays: ['monday', 'thursday'], sessionMinutes: 45 },
-  inventory: {
-    equipment: ['dumbbells'],
-    customEquipment: [{ id: 'trx', name: 'TRX strap' }],
-  },
-};
-
-function renderApp(repository: AthleteRepository, language: Language = 'en') {
-  return render(
-    <I18nextProvider i18n={createI18n(language)}>
-      <App athleteRepository={repository} />
-    </I18nextProvider>,
-  );
-}
 
 async function acceptDisclaimer(user: UserEvent) {
   await user.click(await screen.findByLabelText('I understand and accept'));
@@ -91,14 +59,14 @@ describe('First-run onboarding', () => {
       name: 'Continue',
     });
     expect(continueButton).toBeDisabled();
-    expect(screen.getByText('Step 1 of 5')).toBeInTheDocument();
+    expect(screen.getByText('Step 1 of 6')).toBeInTheDocument();
 
     await acceptDisclaimer(user);
 
     expect(
       await screen.findByRole('heading', { name: 'Your goal' }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Step 2 of 5')).toBeInTheDocument();
+    expect(screen.getByText('Step 2 of 6')).toBeInTheDocument();
     expect(repository.saved?.disclaimerAcceptedAt).toEqual(expect.any(String));
   });
 
@@ -211,11 +179,18 @@ describe('First-run onboarding', () => {
     expect(
       await screen.findByRole('heading', { name: 'Your equipment' }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Step 5 of 5')).toBeInTheDocument();
+    expect(screen.getByText('Step 5 of 6')).toBeInTheDocument();
     await user.click(screen.getByLabelText('Pull-up bar'));
     await user.click(screen.getByLabelText('Dumbbells'));
     await user.type(screen.getByLabelText('Add your own'), 'TRX strap');
     await user.click(screen.getByRole('button', { name: 'Add' }));
+    await user.click(screen.getByRole('button', { name: 'Continue' }));
+
+    expect(
+      await screen.findByRole('heading', { name: 'Your exercises' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('Step 6 of 6')).toBeInTheDocument();
+    await user.click(screen.getByLabelText('Pushups: in my exercises'));
     await user.click(screen.getByRole('button', { name: 'Continue' }));
 
     expect(
@@ -238,19 +213,24 @@ describe('First-run onboarding', () => {
         equipment: ['dumbbells', 'pullUpBar'],
         customEquipment: [{ name: 'TRX strap' }],
       },
+      repertoire: { catalogue: ['pushups'], custom: [] },
     });
   });
 
   it('allows finishing with no equipment at all', async () => {
     const user = userEvent.setup();
-    const { inventory: _inventory, ...withoutInventory } = onboarded;
+    const {
+      inventory: _inventory,
+      repertoire: _repertoire,
+      ...withoutInventory
+    } = onboarded;
     const repository = createInMemoryAthleteRepository(withoutInventory);
     renderApp(repository);
 
     await user.click(await screen.findByRole('button', { name: 'Continue' }));
 
     expect(
-      await screen.findByRole('heading', { name: "You're all set" }),
+      await screen.findByRole('heading', { name: 'Your exercises' }),
     ).toBeInTheDocument();
     expect(repository.saved?.inventory).toEqual({
       equipment: [],

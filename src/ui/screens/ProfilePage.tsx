@@ -45,6 +45,7 @@ export function ProfilePage({ onBack }: ProfilePageProps) {
       />
       <InventoryForm
         stored={athlete.inventory}
+        customExercises={athlete.customExercises ?? []}
         submitLabel={t('common.save')}
         confirmSaved
         onSubmit={(inventory) => save({ ...athlete, inventory })}

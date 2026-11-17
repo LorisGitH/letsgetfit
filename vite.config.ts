@@ -47,6 +47,11 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    // The largest chunk is the Catalogue's data (316 exercises in English and French,
+    // about 115 kB gzipped), loaded only when the Catalogue opens. App code stays well below.
+    chunkSizeWarningLimit: 600,
+  },
   test: {
     setupFiles: ['./src/test/setup.ts'],
     restoreMocks: true,
